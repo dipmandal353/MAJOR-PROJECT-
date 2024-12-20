@@ -11,7 +11,7 @@ export default function Header() {
     const [authUser, setAuthUser, role, token] = useAuth();
     const handleSignOut = async () => {
       try {
-        const response = await axios.get('/api/v1/user/logout');
+        const response = await axios.get('https://prepmonkex.onrender.com/api/v1/user/logout');
         setAuthUser("")
         localStorage.removeItem('MockApp')
         toast.success(response.data.message || 'User logged out successfully!');
