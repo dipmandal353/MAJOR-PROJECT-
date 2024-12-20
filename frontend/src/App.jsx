@@ -24,7 +24,7 @@ import './Component/Mock/Mock.css';
 import './Component/InterviewPrep/Interview.css'; 
 import './Component/Dashboard/Dashboard.css';
 import './Component/Header/Header.css';
-import './Component/test_topics/test_topics.css';
+import './Component/test_topics/Test_topics.css';
 import './Component/Mock Test/Result.css'
 import './Component/Full_Mock_Test/Full_Test.css';
 

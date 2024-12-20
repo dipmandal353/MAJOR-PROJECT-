@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Test_topics.css';
+import './Test_topics.css'
 
 const subjects = [
   { name: 'Computer Science subjects', description: 'Dive into structured programming and problem solving.', path: '/mock-test' },
