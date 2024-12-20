@@ -45,7 +45,7 @@ const Register = ({ isSignIn: initialIsSignIn, setIsSignIn }) => {
       // Simulate a network delay of 2 seconds
       await delay(2);
 
-      const response = await axios.post("/api/v1/user/register", data);
+      const response = await axios.post("https://prepmonkex.onrender.com/api/v1/user/register", data);
 
       localStorage.setItem("MockApp", JSON.stringify(response.data));
       setAuthUser(response.data);
@@ -68,7 +68,7 @@ const Register = ({ isSignIn: initialIsSignIn, setIsSignIn }) => {
       // Simulate a network delay of 2 seconds
       await delay(2);
 
-      const response = await axios.post("/api/v1/user/login", {
+      const response = await axios.post("https://prepmonkex.onrender.com/api/v1/user/login", {
         email: loginEmail,
         password: loginPassword,
       });
