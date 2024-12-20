@@ -52,8 +52,7 @@ const MockPage = () => {
                 >
                   Practice Set
                 </button>
-                <button
-  onClick={() =>
+                <button onClick={() =>
     navigate(
       `/instruction?category=${encodeURIComponent(subject.category)}&subjectName=${encodeURIComponent(subject.name)}`
     )

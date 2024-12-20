@@ -16,7 +16,7 @@ const ResultPageEnhanced = () => {
     totalQuestions,
     subTopics
   } = location.state;
-  console.log(subTopics);
+  
 
   // Calculate subtopic scores
   const calculateSubtopicScores = () => {

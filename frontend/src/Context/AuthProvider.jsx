@@ -4,8 +4,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const initialUserState =
     Cookies.get("token") || localStorage.getItem("MockApp");
-    console.log("Cookie token:", Cookies.get("token"));
-    console.log("LocalStorage MockApp:", localStorage.getItem("MockApp"));
+  
 
   // parse the user data and storing in state.
   const [authUser, setAuthUser] = useState(
@@ -25,6 +24,6 @@ export const AuthProvider = ({ children }) => {
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  console.log("useAuth Context:", context); // Should log [authUser, setAuthUser]
+  
   return context;
 };

@@ -73,8 +73,7 @@ export const getQuestions = async (req, res) => {
     const {  category, subjectName } = req.query;
     const subjectNamesArray = Array.isArray(subjectName) ? subjectName : [subjectName];
 
-console.log("Category:", category);
-console.log("Subject Names:", subjectNamesArray);
+
 
     // Build a dynamic query object
     const query = {};
@@ -110,7 +109,7 @@ console.log("Subject Names:", subjectNamesArray);
       })),
       subTopic: q.subTopic || "Unknown",
     }));
-    console.log(formattedQuestions);
+    
     
 
     // Send the formatted response

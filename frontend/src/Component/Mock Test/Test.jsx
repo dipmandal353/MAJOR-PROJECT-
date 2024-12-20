@@ -47,14 +47,14 @@ const MockTest = () => {
       subjectName.split(",").forEach((subject) => params.append("subjectName", subject)); // Append each subject
   
       const response = await axios.get(`/api/v1/question/get-questions?${params.toString()}`);
-      console.log(response.data);
+     
       
       const fetchedQuestions = response.data.data.map((question) => ({
         ...question,
         correctAnswerKey: question.answer[0]?.key,
         subTopic: question.subTopic || "Unknown",
       }));
-      console.log(fetchedQuestions[0]?.subTopic);
+      
       const shuffledQuestions = shuffleArray(fetchedQuestions).slice(0, questionCount);
       setRandomizedQuestions(shuffledQuestions);
       setQuestions(shuffledQuestions);
