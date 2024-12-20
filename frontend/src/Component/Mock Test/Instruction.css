@@ -1,0 +1,145 @@
+/* Enhanced Instruction Page Styles */
+.instruction-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.instruction-page::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.instruction-page {
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbar for IE and Edge */
+.instruction-page {
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.instruction-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  width: 100%;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-title {
+  font-size: 2.2rem;
+  color: #4a148c;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.instruction-content {
+  margin-bottom: 2rem;
+  color: #424242;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.instruction-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+
+}
+
+.instruction-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+  color: #5e35b1;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.instruction-list li::before {
+  content: '\25CF';
+  position: absolute;
+  left: 0;
+  color: #7b1fa2;
+  font-size: 1.2rem;
+}
+
+.question-selector {
+  background: #f3e5f5;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #d1c4e9;
+}
+
+.slider {
+  width: 100%;
+  margin: 1rem 0;
+  appearance: none;
+  height: 12px;
+  background: #c5cae9;
+  outline: none;
+  border-radius: 6px;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #7e57c2;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #7e57c2;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.question-count {
+  text-align: center;
+  font-weight: bold;
+  color: #6a1b9a;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.start-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #7b1fa2, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #6a1b9a, #4a148c);
+  transform: translateY(-3px);
+}

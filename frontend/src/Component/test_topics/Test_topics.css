@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Container and Background */
+.unique-mocktest-container {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #121214);
+  color: #fff;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Graph Animation Background */
+.unique-mocktest-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: moveGraph 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveGraph {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+/* Heading */
+.unique-heading {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #f5f5f5;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  font-family: "Arvo", serif;
+}
+
+/* Grid Layout */
+.unique-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subject Box */
+.unique-subject-box {
+  position: relative;
+  background: linear-gradient(145deg, #3a3a5c, #29293f);
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.7), -8px -8px 15px rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Hover Effect */
+.unique-subject-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.9), -12px -12px 30px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(58, 58, 92, 0.8), rgba(41, 41, 63, 0.8));
+  color: #00ffff; /* Cyan color on hover */
+}
+
+/* Subject Box Hover Transparent Effect */
+.unique-subject-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.unique-subject-box:hover::before {
+  opacity: 1;
+}
+
+/* Subject Title */
+.unique-subject-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
+}
+
+.unique-subject-box:hover .unique-subject-title {
+  color: #00ffff; /* Cyan color on hover */
+}
+
+/* Subject Description */
+.unique-subject-description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  transition: color 0.4s ease;
+}
+
+.unique-subject-box:hover .unique-subject-description {
+  color: #e6ffff; /* Light cyan color on hover */
+}
+

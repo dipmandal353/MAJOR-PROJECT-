@@ -1,0 +1,202 @@
+:root {
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #ffffff;
+  --timer-text: #3498db;
+  --primary-blue: #3498db;
+  --review-yellow: #f1c40f;
+  --submit-green: #27ae60;
+  --option-bg: #f5f6f7;
+  /* --disabled-gray: #bdc3c7; */
+  --visited-color: #2ecc71; /* Color for visited questions */
+  --not-visited-color: #fbfdfd; /* Color for not visited questions */
+  --marked-for-review-color: #f39c12; /* Color for marked for review questions */
+}
+
+.mock-test-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.mock-test-sidebar {
+  width: 280px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mock-test-timer-section {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.mock-test-timer-label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.mock-test-timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--timer-text);
+}
+
+.mock-test-status {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.mock-test-status-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mock-test-status-count {
+  color: var(--primary-blue);
+}
+
+.mock-test-question-numbers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.mock-test-question-box {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* Default to not visited color */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  color: black;
+}
+
+.mock-test-question-box.visited {
+  background-color: #4caf50; /* Visited question color */
+  color: rgb(255, 255, 255);
+}
+
+.mock-test-question-box.not-visited {
+  background-color: #ffffff;
+}
+
+.mock-test-question-box.marked-for-review {
+  background-color: #f1c40f; /* Orange for marked for review */
+  color: rgb(0, 0, 0);
+}
+
+.mock-test-question-box.active {
+  background-color: #4caf50; /* Green for active question */
+  color: white;
+}
+
+.mock-test-question-box:hover {
+  background-color: var(--primary-blue);
+}
+
+.mock-test-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-test-question {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.mock-test-question h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.mock-test-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mock-test-option {
+  background-color: var(--option-bg);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mock-test-option:hover {
+  background-color: #e8e9ea;
+}
+
+.mock-test-option input[type="radio"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bdc3c7;
+}
+
+.mock-test-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.mock-test-nav-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mock-test-nav-button.previous {
+  background-color: #3498db;
+  color: white;
+}
+
+.mock-test-nav-button.review {
+  background-color: var(--review-yellow);
+  color: #242525;
+}
+
+.mock-test-nav-button.next {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.mock-test-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--submit-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.mock-test-submit:hover {
+  background-color: #219a52;
+}

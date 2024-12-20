@@ -1,0 +1,377 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+.mock-test {
+  background: linear-gradient(130deg, #1e1e2f, #2a2a3e, #3a3a4e, #2a2a3e, #1e1e2f);
+  background-size: 200% 200%;
+  animation: complexGradientAnimation 20s ease-in-out infinite;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Animation for subtle light movement */
+@keyframes complexGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.test-container {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 90vw;
+  max-width: 2000px;
+  margin-right: -100px;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  font-family: 'Roboto', sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.test-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.test-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Keyframes for the complex animation */
+/* @keyframes complexGradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+} */
+
+/* Fade-in animation */
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+/* .test-container:hover {
+  transform: scale(1.02);
+} */
+
+/* Header styles */
+.test-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.test-header h1 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.question-number {
+  font-size: 14px;
+  color: #555;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #d9e4fc;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 12px;
+  margin-top: 15px;
+}
+
+.progress {
+  height: 100%;
+  background: #003f88;
+  transition: width 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+/* Question and options styling */
+.question-container h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  background: #f7f9fc;
+  padding: 12px 18px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option.correct {
+  background: #e8f6e8;
+  border-left: 6px solid #4caf50;
+}
+
+.option.correct:before {
+  content: "✔";
+  color: #4caf50;
+  margin-right: 8px;
+}
+
+.option.incorrect {
+  background: #fbeaea;
+  border-left: 6px solid #f44336;
+}
+
+.option.incorrect:before {
+  content: "✖";
+  color: #f44336;
+  margin-right: 8px;
+}
+
+.option:hover {
+  background: #eaf2ff;
+  transform: scale(1.02);
+}
+
+/* Tab buttons and content styling */
+/* Adjust container for buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: space-between; /* Ensure buttons are evenly spaced */
+  align-items: center; /* Align items vertically on the same line */
+  margin-top: 20px;
+  padding: 0 10px;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+/* Ensure tab and navigation buttons share the same styles */
+.tab-button,
+.navigation button {
+  background: #4a90e2;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* Active or hover state for both button types */
+.tab-button.active,
+.tab-button:hover,
+.navigation button:hover {
+  background: #357ab7;
+}
+
+/* Specific styles for disabled navigation buttons */
+.navigation button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Add spacing between tab buttons and navigation buttons */
+.tab-buttons .navigation {
+  display: flex;
+  gap: 10px;
+}
+
+
+.tab-content {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9faff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-container h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.workspace-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation buttons */
+.tab-buttons .navigation {
+  display: flex;
+  gap: 10px;
+} 
+
+.navigation button {
+  background: #003f88;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.navigation button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.navigation button:not(:disabled):hover {
+  background: #001f4d;
+  transform: translateY(-2px);
+}
+
+/* Move Next button to the right side */
+.navigation {
+  position: relative;
+  width: 100%; /* Ensure the navigation spans the full container */
+  display: flex;
+  justify-content: space-between; /* Separate buttons to opposite sides */
+}
+
+.navigation .next-button {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+}
+
+
+/* Responsive Design */
+@media (max-height: 800px) {
+  .test-container {
+    max-height: 90vh;
+  }
+
+  .navigation button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Styles for the circle icons on the left */
+.left-icons-container {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+/* Container for individual circle icon */
+.circle-icon-container {
+  position: relative;
+}
+
+/* Circle Icon styling */
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Make sure the logo image fits well inside the circle */
+.icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Add shadow effect when hovered */
+.circle-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for the circle icon to show tooltip */
+.circle-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+/* Tooltip text styling */
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  left: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Optional adjustment to make tooltip text look nicer */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent;
+}
+
+

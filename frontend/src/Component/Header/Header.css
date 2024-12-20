@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.dashboard-header {
+  @apply sticky top-0 z-10 flex justify-between items-center; /* Use
+flex and justify-between */
+}
+
+.profile-button {
+  @apply flex items-center text-white transition-colors duration-200;
+  background-color: #4CAF50; /* Green background for profile */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.signout-button {
+  @apply flex items-center text-white transition-colors duration-200;
+  background-color: #F44336; /* Red background for sign out */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.profile-button:hover {
+  background-color: #388E3C; /* Darker green on hover */
+}
+
+.signout-button:hover {
+  background-color: #D32F2F; /* Darker red on hover */
+}

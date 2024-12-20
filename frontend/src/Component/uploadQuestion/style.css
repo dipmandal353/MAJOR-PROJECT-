@@ -1,0 +1,104 @@
+/* style.css */
+
+/* General Form Styling */
+.question-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.question-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+.question-form input,
+.question-form select,
+.question-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.question-form input:focus,
+.question-form select:focus,
+.question-form button:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Add/Remove Button Styling */
+.question-form button[type="button"] {
+  width: auto;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.question-form button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Submit Button Styling */
+.question-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.question-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Option and Answer Section */
+.question-form div > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-form input[name="key"],
+.question-form input[name="value"] {
+  flex: 1;
+}
+
+/* Error Message Styling */
+.question-form p {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: -0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-form {
+    padding: 1rem;
+  }
+
+  .question-form div > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .question-form button[type="button"],
+  .question-form button[type="submit"] {
+    width: 100%;
+  }
+}

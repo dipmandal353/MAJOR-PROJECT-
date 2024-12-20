@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+} */
+.login-page {
+  background: #0d0d0d; /* Dark background */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Background Animation Container */
+.shape-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Ensures it stays behind other content */
+}
+
+.shape-container .shape {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 75, 43, 0.3);
+  border-radius: 8px; /* Adjust for square corners */
+  animation: float 20s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+/* Add varied sizes, shapes, and colors */
+.shape:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 5%;
+  background: rgba(255, 75, 43, 0.6);
+  animation-delay: 0s;
+}
+
+.shape:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  top: 30%;
+  left: 80%;
+  background: rgba(255, 193, 7, 0.6);
+  animation-delay: 4s;
+}
+
+.shape:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 30%;
+  background: rgba(0, 123, 255, 0.6);
+  animation-delay: 6s;
+}
+
+.shape:nth-child(4) {
+  width: 90px;
+  height: 90px;
+  top: 70%;
+  left: 60%;
+  background: rgba(40, 167, 69, 0.6);
+  animation-delay: 2s;
+}
+
+.shape:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  left: 95%;
+  background: rgba(23, 162, 184, 0.6);
+  animation-delay: 8s;
+}
+
+.shape:nth-child(6) {
+  width: 120px;
+  height: 120px;
+  top: 85%;
+  left: 10%;
+  background: rgba(108, 117, 125, 0.6);
+  animation-delay: 10s;
+}
+
+.shape:nth-child(7) {
+  width: 80px;
+  height: 80px;
+  top: 5%;
+  left: 50%;
+  background: rgba(220, 53, 69, 0.6);
+  animation-delay: 12s;
+}
+
+.shape:nth-child(8) {
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  left: 25%;
+  background: rgba(102, 16, 242, 0.6);
+  animation-delay: 14s;
+}
+
+.shape:nth-child(9) {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  left: 75%;
+  background: rgba(253, 126, 20, 0.6);
+  animation-delay: 16s;
+}
+
+.shape:nth-child(10) {
+  width: 90px;
+  height: 90px;
+  top: 35%;
+  left: 15%;
+  background: rgba(0, 123, 255, 0.8);
+  animation-delay: 18s;
+}
+
+/* Floating animation for 3D effect */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+
+
+
+/* Container */
+.app-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  display: flex;
+}
+
+/* Form Container */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  padding: 50px;
+  transition: all 0.6s ease-in-out;
+  z-index: 1;
+}
+
+/* Sign-in Container */
+.sign-in-container {
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: translateX(0);
+}
+
+/* Sign-up Container */
+.sign-up-container {
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Active State for Sign-up */
+.app-container.sign-up-mode .sign-up-container {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.app-container.sign-up-mode .sign-in-container {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Overlay */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.overlay {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  color: #ffffff;
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.app-container.sign-up-mode .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.app-container.sign-up-mode .overlay-right {
+  transform: translateX(20%);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.app-container.sign-up-mode .overlay-left {
+  transform: translateX(0);
+}
+
+/* Input Fields */
+.infield {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.infield input {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infield input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 75, 43, 0.5);
+  border: 1px solid #ff4b2b;
+}
+
+/* Hide label when input is focused */
+.infield input:focus + label,
+.infield input:not(:placeholder-shown) + label {
+  display: none;
+}
+
+.infield label {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 16px;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Show label when input is empty and not focused */
+.infield input:placeholder-shown:not(:focus) + label {
+  display: block;
+}
+
+/* Box Hover Effect */
+.infield:hover input {
+  border: 1px solid #ff4b2b;
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.3);
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+  align-items: flex-start; 
+  display: flex;
+  flex-direction: column;
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+a {
+  color: #ff4b2b;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+a.forgot {
+  color: #ff4b2b;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Sign In Button */
+.Register-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4CAF50; /* Button background color */
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.Register-button {
+  background-color: #45a049; /* Button color on hover */
+  transform: scale(1.1); /* Slightly grows on hover */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Register-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.3); /* Ripple color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.Register-button:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Ripple effect on hover */
+}
+
+/* Overlay Panel Buttons (Sign In and Sign Up) */
+.overlay-panel button {
+  border-radius: 20px;
+  border: 1px solid #09360a6d;
+  background-color: #09360a6d;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.overlay-panel button:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+  transform: scale(1.05);
+}
+
+.overlay-panel button:active {
+  transform: scale(0.95);
+}
+
+.overlay-panel button:focus {
+  outline: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.overlay-panel h1,
+.overlay-panel p {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
