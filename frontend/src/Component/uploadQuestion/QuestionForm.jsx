@@ -38,7 +38,7 @@ const QuestionForm = () => {
         toast.success(response.data.message || 'Question added successfully!');
         
         // Navigate to PracticeSet with query parameters
-        navigate(`/practice-set?category=${data.category}&subjectName=${data.subjectName}`);
+        navigate(`https://prepmonkex.onrender.com/practice-set?category=${data.category}&subjectName=${data.subjectName}`);
 
         // Reset form fields and states
         reset();
