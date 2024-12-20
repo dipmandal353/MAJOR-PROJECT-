@@ -27,7 +27,7 @@ const PracticeSet = () => {
   const fetchQuestions = async () => {
     try {
       const response = await axios.get(
-        `/api/v1/question/get-questions?category=${category}&subjectName=${subjectName}`
+        `https://prepmonkex.onrender.com/api/v1/question/get-questions?category=${category}&subjectName=${subjectName}`
       );
       const fetchedQuestions = response.data.data.map((question) => ({
         ...question,
