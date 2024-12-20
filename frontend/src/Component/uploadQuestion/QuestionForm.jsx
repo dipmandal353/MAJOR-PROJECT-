@@ -25,7 +25,7 @@ const QuestionForm = () => {
 
     try {
       const response = await axios.post(
-        '/api/v1/question/upload-questions',
+        'https://prepmonkex.onrender.com/api/v1/question/upload-questions',
         { questions: [questionData] },
         {
           headers: {
@@ -38,7 +38,7 @@ const QuestionForm = () => {
         toast.success(response.data.message || 'Question added successfully!');
         
         // Navigate to PracticeSet with query parameters
-        navigate(`https://prepmonkex.onrender.com/practice-set?category=${data.category}&subjectName=${data.subjectName}`);
+        navigate(`/practice-set?category=${data.category}&subjectName=${data.subjectName}`);
 
         // Reset form fields and states
         reset();
