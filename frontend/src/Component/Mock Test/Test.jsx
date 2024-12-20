@@ -46,7 +46,7 @@ const MockTest = () => {
       params.append("category", category);
       subjectName.split(",").forEach((subject) => params.append("subjectName", subject)); // Append each subject
   
-      const response = await axios.get(`/api/v1/question/get-questions?${params.toString()}`);
+      const response = await axios.get(`https://prepmonkex.onrender.com/api/v1/question/get-questions?${params.toString()}`);
      
       
       const fetchedQuestions = response.data.data.map((question) => ({
