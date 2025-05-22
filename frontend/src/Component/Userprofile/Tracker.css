@@ -1,0 +1,205 @@
+.contribution-tracker {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: rgba(28, 28, 46, 0.85); /* dark semi-transparent */
+  backdrop-filter: blur(4px); /* optional: glass effect */
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 1px solid #3a3a6a;
+  padding: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: visible;
+  color: #e5e7eb; /* light text */
+  z-index: 1;
+}
+
+.month-label,
+.day-label,
+.submission-count,
+.tracker-stats,
+.stat-value {
+  color: #d1d5db; /* light gray */
+}
+
+.tracker-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.submission-count {
+  font-size: 17px;
+  color: #bcc7d3;
+  display: flex;
+  align-items: center;
+}
+
+.stat {
+  font-size: 17px;
+  color: #ccd1d7;
+}
+
+.count {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.info-icon {
+  margin-left: 8px;
+  color: #c4ceda;
+  font-size: 12px;
+  cursor: help;
+}
+
+.tracker-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #586069;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #f1f3f5;
+}
+
+.contribution-grid {
+  display: flex;
+  flex-wrap: wrap; /* Changed from nowrap to wrap */
+  gap: 16px;
+  overflow-x: hidden; /* Hide horizontal scroll */
+  padding-bottom: 8px;
+  max-height: 350px; /* Limit total height if needed */
+  z-index: 0;
+}
+
+.month-container {
+  flex: 1 1 calc(33.33% - 16px); /* Roughly 3 per row */
+  max-width: calc(33.33% - 16px);
+}
+
+.month-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #d5dde4;
+  margin-bottom: 4px;
+}
+
+.day-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 4px;
+}
+
+.day-label {
+  font-size: 8px;
+  color: #6cd741;
+  text-align: center;
+}
+
+.month-cells {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.contribution-cell {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #ccd1d7;
+  border-radius: 2px;
+}
+
+.contribution-cell--empty {
+  background-color: transparent;
+}
+
+.contribution-cell--level-1 {
+  background-color: #28b03e;
+}
+
+.contribution-cell--level-2 {
+  background-color: #40c463;
+}
+
+.contribution-cell--level-3 {
+  background-color: #30a14e;
+}
+
+.contribution-cell--level-4 {
+  background-color: #216e39;
+}
+
+/* Year selector styles */
+.year-selector {
+  margin-left: 20px;
+  position: relative;
+  z-index: 100; /* Increased z-index */
+}
+
+.year-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #24292e;
+  background-color: #b1bbc5;
+  z-index: 100;
+}
+
+.year-dropdown-trigger:hover {
+  background-color: #c5c7c9;
+}
+
+.dropdown-icon {
+  color: #586069;
+}
+
+.year-dropdown-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background-color: #2a2a40;
+  border: 1px solid #3a3a6a;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block; /* Ensure it's displayed as a block */
+  pointer-events: auto; /* Ensure it receives mouse events */
+}
+
+.year-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.year-option:hover {
+  background-color: #3a3a6a;
+}
+
+.year-option.selected {
+  background-color: #4a4a7a;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contribution-grid-container {
+  position: relative;
+  z-index: 0; /* Lower z-index than the dropdown */
+  overflow: visible;
+}

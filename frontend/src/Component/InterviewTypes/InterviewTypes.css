@@ -1,0 +1,298 @@
+/* Base styles with unique class names prefixed with 'ic-' */
+.ic-interview-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  z-index: 1;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: #0a0a0a;
+}
+
+/* Enhanced background animations */
+.ic-animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.ic-floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120, 80, 255, 0.3) 0%, rgba(70, 40, 180, 0.1) 50%, transparent 70%);
+  animation: ic-float 20s infinite alternate ease-in-out;
+  filter: blur(20px);
+}
+
+.ic-glow-effect {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: ic-pulse 15s infinite alternate ease-in-out;
+}
+
+.ic-glow-1 {
+  top: 20%;
+  left: 30%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(120, 0, 255, 0.4) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.ic-glow-2 {
+  bottom: 10%;
+  right: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 255, 0.4) 0%, transparent 70%);
+  animation-delay: 5s;
+}
+
+.ic-glow-3 {
+  top: 60%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 0, 200, 0.3) 0%, transparent 70%);
+  animation-delay: 10s;
+}
+
+.ic-animated-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: ic-moveLine 15s infinite alternate ease-in-out;
+}
+
+/* Categories grid */
+.ic-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Card styles */
+.ic-category-card {
+  background: rgba(30, 30, 40, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s ease;
+  animation: ic-fadeIn 0.8s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ic-category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+  background-size: 200% 200%;
+  animation: ic-shimmer 8s infinite;
+  z-index: -1;
+}
+
+.ic-category-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ic-card-content {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.ic-card-content:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  filter: brightness(1.05) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle glow */
+}
+.ic-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ic-card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+.ic-card-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.ic-card-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+}
+
+.ic-explore-text {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.ic-arrow-icon {
+  animation: ic-bounceX 3s infinite;
+}
+
+/* Gradient colors */
+.ic-gradient-purple {
+  background: linear-gradient(135deg, rgba(120, 40, 200, 0.8), rgba(80, 20, 150, 0.8));
+}
+
+.ic-gradient-blue {
+  background: linear-gradient(135deg, rgba(40, 120, 200, 0.8), rgba(20, 80, 150, 0.8));
+}
+
+.ic-gradient-teal {
+  background: linear-gradient(135deg, rgba(40, 180, 160, 0.8), rgba(20, 120, 100, 0.8));
+}
+
+/* Animations with unique names */
+@keyframes ic-fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ic-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-50px) translateX(20px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(30px) translateX(-20px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(-20px) translateX(10px) rotate(3deg);
+  }
+}
+
+@keyframes ic-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes ic-bounceX {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes ic-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes ic-moveLine {
+  0% {
+    transform: translateY(0) rotate(var(--rotation, 0deg));
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100px) rotate(var(--rotation, 0deg));
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ic-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ic-glow-effect {
+    opacity: 0.3;
+    filter: blur(60px);
+  }
+}
+
+.with-header-offset {
+  margin-top: 80px; /* Adjust this to match your header height */
+}
+@media (max-width: 480px) {
+  .with-header-offset {
+    margin-top: 70px; /* slightly smaller on small screens */
+  }
+}.with-header-offset {
+  margin-top: 80px; /* Adjust this to match your header height */
+}
+@media (max-width: 480px) {
+  .with-header-offset {
+    margin-top: 70px; /* slightly smaller on small screens */
+  }
+}

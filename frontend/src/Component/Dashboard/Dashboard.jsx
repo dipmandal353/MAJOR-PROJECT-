@@ -14,9 +14,10 @@ export default function Dashboard() {
 
   const studyOptions = [
     { title: 'MockTest', icon: '📚', color: 'blue', path: '/testTopics' },
-    { title: 'Interview Preparation', icon: '👥', color: 'green', path: '/interview-prep' },
+    { title: 'Interview Preparation', icon: '👥', color: 'green', path: '/inttypes' },
     { title: 'Entrance Exam Prep', icon: '🎓', color: 'purple', path: '/entrance-exam' },
     { title: 'Quiz', icon: '❓', color: 'yellow', path: '/quiz' },
+    { title: 'DSA Preparation', icon: '🚀', color: 'white', path: '/Dsa' },
   ];
 
   const handleNavigate = (path) => {
@@ -25,43 +26,43 @@ export default function Dashboard() {
   
 
   return (
-    <>
-    <Header />
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-100">
-    
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Welcome back, {name} !! 🧠</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {studyOptions.map((option, index) => (
+    <div className="enhanced-page-container">
+      <Header/>
+    <main className="enhanced-page-main">
+        <h2 className="enhanced-page-welcome-text">Welcome back, {name} !! 🧠 </h2>
+        <div className="enhanced-page-study-options">
+          {studyOptions.map((option, index) => (
             <div
               key={index}
-              className="block"
-              onClick={() => handleNavigate(option.path)} // Programmatic navigation
+              className="enhanced-page-option-card"
+              onClick={() => handleNavigate(option.path)}
             >
               <div
-                className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 h-full flex flex-col cursor-pointer`}
+                className="enhanced-page-icon-container"
+                style={{ background: option.color }}
               >
-                <div
-                  className={`flex items-center justify-center w-12 h-12 rounded-full mb-4 bg-${option.color}-100`}
-                >
-                  <span className="text-2xl">{option.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{option.title}</h3>
-                <p className="text-gray-600 flex-grow">
-                  {option.title === 'MockTest' && 'Practice with mock tests on core CS subjects'}
-                  {option.title === 'Interview Preparation' && 'Get ready for your next interview'}
-                  {option.title === 'Entrance Exam Prep' && 'Prepare for various entrance exams'}
-                  {option.title === 'Quiz' && 'Test your knowledge with interactive quizzes'}
-                </p>
+                <span className="enhanced-page-card-icon">{option.icon}</span>
               </div>
+              <h3 className="enhanced-page-card-title">{option.title}</h3>
+              <p className="enhanced-page-card-description">
+                {option.title === "MockTest" &&
+                  "Practice with mock tests on core CS subjects"}
+                {option.title === "Interview Preparation" &&
+                  "Get ready for your next interview"}
+                {option.title === "Entrance Exam Prep" &&
+                  "Prepare for various entrance exams"}
+                {option.title === "Quiz" &&
+                  "Test your knowledge with interactive quizzes"}
+                {option.title === "DSA Preparation" &&
+                  "Enhance your problem-solving skills with DSA preparation"}
+              </p>
             </div>
           ))}
         </div>
       </main>
-      <Toaster /> {/* For displaying toast notifications */}
+      
     </div>
-    </>
+
   );
-}
+};
 

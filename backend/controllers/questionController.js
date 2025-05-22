@@ -70,7 +70,7 @@ export const uploadQuestions = async (req, res) => {
 export const getQuestions = async (req, res) => {
   try {
     // Destructure query parameters
-    const {  category, subjectName } = req.query;
+    const {  category, subjectName, difficulty } = req.query;
     const subjectNamesArray = Array.isArray(subjectName) ? subjectName : [subjectName];
 
 
@@ -79,6 +79,7 @@ export const getQuestions = async (req, res) => {
     const query = {};
     
     if (category) query.category = category;
+    if (difficulty) query.difficulty = difficulty;
     if (subjectNamesArray.length > 0) query.subjectName = { $in: subjectNamesArray };
 
     // Fetch questions from the database

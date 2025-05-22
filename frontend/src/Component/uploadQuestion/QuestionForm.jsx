@@ -25,7 +25,7 @@ const QuestionForm = () => {
 
     try {
       const response = await axios.post(
-        'https://prepmonkex.onrender.com/api/v1/question/upload-questions',
+        '/api/v1/question/upload-questions',
         { questions: [questionData] },
         {
           headers: {
@@ -75,10 +75,12 @@ const QuestionForm = () => {
 
       <div>
         <label>Question</label>
-        <input
+        <textarea
           {...register('question', { required: 'Question is required' })}
-          type="text"
+          rows={10}
+          style={{ whiteSpace: 'pre-wrap' }} // This ensures line breaks are preserved
         />
+
         {errors.question && <p>{errors.question.message}</p>}
       </div>
 

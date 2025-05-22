@@ -54,9 +54,9 @@ const ResultPageEnhanced = () => {
 
   // Get color and icon for score
   const getScoreColor = (percentage) => {
-    if (percentage >= 80) return "green";
-    if (percentage >= 60) return "yellow";
-    return "red";
+    if (percentage >= 80) return "good";
+    if (percentage >= 60) return "average";
+    return "bad";
   };
 
   const getScoreIcon = (percentage) => {
@@ -67,7 +67,11 @@ const ResultPageEnhanced = () => {
 
   return (
     <div className="result-page-enhanced">
-      <h1 className="result-title">{subjectName} Test Results</h1>
+      <h1 className="result-title">
+        {Array.isArray(subjectName) 
+          ? subjectName.join(' • ') 
+          : subjectName} Test Results
+      </h1>
       <p className="paragraph">Category: {category}</p>
       <p className="paragraph">
         Time Taken: {Math.floor(timeTaken / 60)} minutes {timeTaken % 60} seconds
@@ -101,9 +105,9 @@ const ResultPageEnhanced = () => {
               <div key={subtopic} className="subtopic-card">
                 <h3 className="subtopic-name">{subtopic}</h3>
                 <div className="subtopic-bar-container">
-                  <div className="progress-bar">
+                  <div className="subtopic-progress-bar">
                     <div
-                      className={`progress-bar-fill ${getScoreColor(percentage)}`}
+                      className={`subtopic-progress-bar-fill ${getScoreColor(percentage)}`}
                       style={{ width: `${percentage}%` }}
                     >
                       {percentage.toFixed(1)}%
@@ -142,16 +146,18 @@ const ResultPageEnhanced = () => {
           return (
             <div key={index} className="answer">
               <h3>{question.question}</h3>
+              <div className="content-line">
               <p className="paragraph">
                 Your Answer: {userAnswerKey || "N/A"} : {userAnswerValue}
               </p>
               <p className={`answer-status ${isCorrect ? "correct" : "incorrect"}`}>
-                {isCorrect ? "Correct" : "Incorrect"}
+                {isCorrect ? "(Correct)" : "(Incorrect)"}
               </p>
+              </div>
               {!isCorrect && (
                 <p className="correct-answer">
                   Correct Answer :  {correctAnswerValue}
-                </p>
+                 </p>
               )}
             </div>
           );

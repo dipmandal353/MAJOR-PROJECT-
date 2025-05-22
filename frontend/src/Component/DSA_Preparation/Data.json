@@ -1,0 +1,1662 @@
+[
+  {
+    "id": "subject-1",
+    "title": "Step 1: Learn the basics",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-1",
+        "title": "Lec 1: Things to Know in C++/Java/Python or any language",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-1",
+            "title": "User Input / Output",
+            "article": 
+              [
+                {
+                  "title": "Article 1",
+                  "url": "https://www.geeksforgeeks.org/basic-input-output-c/"
+                },
+                {
+                  "title": "Article 1",
+                  "url": "https://www.geeksforgeeks.org/basic-input-output-c/"
+                }
+            ],
+            "youtube": "https://www.youtube.com/watch?v=SzPbgRzWbFc",
+            "practice": "https://www.hackerrank.com/domains/tutorials/10-days-of-javascript",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-2",
+            "title": "Data Types",
+            "article": "https://www.geeksforgeeks.org/data-types-in-programming/",            
+            "youtube": "https://www.youtube.com/watch?v=X0zdAG7gfgs",
+            "practice": "https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-3",
+            "title": "If Else statements",
+            "article": "https://example.com/article/if-else",
+            "youtube": "https://youtu.be/TrbPPCy0KXw?si=AzhPp84YdG5abaYw",
+            "practice": "https://www.hackerrank.com/challenges/js10-if-else/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-4",
+            "title": "Switch Statement",
+            "article": "https://example.com/article/switch",
+            "youtube": "https://youtu.be/d-Y4CmyrAuA?si=iBrEuGk5N92XrPGh",
+            "practice": "https://www.hackerrank.com/contests/programming-skills1-ende/challenges/task-2-12-the-switch-case-statement",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-5",
+            "title": "Basic I/O Operations",
+            "article": "https://example.com/article/basic-io",
+            "youtube": "https://youtu.be/jU0cndZziO0?si=eanDOhMXUZDjN0w9",
+            "practice": "https://www.programiz.com/c-programming/c-input-output",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-2",
+        "title": "Lec 2: Loops",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-6",
+            "title": "For Loop",
+            "article": "https://example.com/article/for-loop",
+            "youtube": "https://youtu.be/2ySd7vJ_UkY?si=for-loop",
+            "practice": "https://www.hackerrank.com/challenges/python-loops/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-7",
+            "title": "While Loop",
+            "article": "https://example.com/article/while-loop",
+            "youtube": "https://youtu.be/VK8vZ6ghPjU?si=while-loop",
+            "practice": "https://www.hackerrank.com/challenges/java-loops/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-8",
+            "title": "Do-While Loop",
+            "article": "https://example.com/article/do-while-loop",
+            "youtube": "https://youtu.be/v2X9tsB7x6A?si=do-while-loop",
+            "practice": "https://www.hackerrank.com/challenges/js10-loops/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-9",
+            "title": "Nested Loops",
+            "article": "https://example.com/article/nested-loops",
+            "youtube": "https://youtu.be/NEtwJASLU8Q?si=nested-loops",
+            "practice": "https://www.hackerrank.com/challenges/printing-pattern-2/problem",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-3",
+        "title": "Lec 3: Build up Logical Thinking",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-10",
+            "title": "Print Patterns (Stars, Triangles, Squares)",
+            "youtube": "https://youtu.be/tNm_NNSB3_w",
+            "practice": "https://www.geeksforgeeks.org/c-program-to-print-pyramid-pattern/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-11",
+            "title": "Print Number Patterns",
+            "youtube": "https://youtu.be/lsOOs5J8ycw",
+            "practice": "https://practice.geeksforgeeks.org/problems/number-patterns/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-12",
+            "title": "Bit Manipulation Basics",
+            "youtube": "https://youtu.be/7yJlFkpS2dk",
+            "practice": "https://www.geeksforgeeks.org/problems/set-kth-bit3724/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-13",
+            "title": "Mathematics for Coding (GCD, LCM, Prime Numbers)",
+            "youtube": "https://youtu.be/fOlfB8OuvpA",
+            "practice": "https://practice.geeksforgeeks.org/problems/lcm-and-gcd/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-2",
+    "title": "Step 2: Learn Important Sorting Techniques",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-3",
+        "title": "Lec 1: Sorting I (Selection, Bubble, Insertion Sort)",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-14",
+            "title": "Selection Sort",
+            "article": "https://example.com/article/selection-sort",
+            "youtube": "https://youtu.be/3h2w9lNqCrA",
+            "practice": "https://www.hackerrank.com/challenges/ctci-selection-sort/problem",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-15",
+            "title": "Bubble Sort",
+            "article": "https://example.com/article/bubble-sort",
+            "youtube": "https://youtu.be/Jdtq5uKz-w4",
+            "practice": "https://www.hackerrank.com/challenges/ctci-bubble-sort/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-16",
+            "title": "Insertion Sort",
+            "article": "https://example.com/article/insertion-sort",
+            "youtube": "https://youtu.be/s9fmGjFY1v0",
+            "practice": "https://www.hackerrank.com/challenges/insertionsort1/problem",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-4",
+        "title": "Lec 2: Sorting II (Merge, Quick, Recursive Sort)",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-17",
+            "title": "Merge Sort",
+            "article": "https://example.com/article/merge-sort",
+            "youtube": "https://youtu.be/tn9hxD8gx2M",
+            "practice": "https://www.hackerrank.com/contests/hw1/challenges/merge-sort",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-18",
+            "title": "Quick Sort",
+            "article": "https://example.com/article/quick-sort",
+            "youtube": "https://youtu.be/tWCaFVJMUi8",
+            "practice": "https://www.hackerrank.com/challenges/quicksort1/problem",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-19",
+            "title": "Recursive Sort",
+            "article": "https://example.com/article/recursive-sort",
+            "youtube": "https://youtu.be/E3i5Tm9k38s",
+            "practice": "https://www.hackerrank.com/topics/recursion",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-3",
+    "title": "Step 3: Arrays",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-5",
+        "title": "Lec 1: Easy Problems on Arrays",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-20",
+            "title": "Find Largest Element",
+            "article": "https://example.com/article/find-largest-element",
+            "youtube": "https://youtu.be/QYTESxvQZ-k?si=9K5Xgdu-HyqTaBdD",
+            "practice": "https://leetcode.com/problems/largest-number/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-21",
+            "title": "Find Second Largest Element",
+            "article": "https://example.com/article/second-largest-element",
+            "youtube": "https://youtu.be/eIm9ODShmCI?si=2tJ9bV_MJN2MGFqf",
+            "practice": "https://www.geeksforgeeks.org/find-second-largest-element-array/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-22",
+            "title": "Check if Array is Sorted",
+            "article": "https://example.com/article/check-sorted-array",
+            "youtube": "https://youtu.be/Vzs_vlCIFEw?si=CnSMLBE4YplX1Xll",
+            "practice": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-23",
+            "title": "Remove Duplicates from Sorted Array",
+            "article": "https://example.com/article/remove-duplicates-array",
+            "youtube": "https://youtu.be/DEJAZBq0FDA?si=eZVeQk5lv9mvN2rC",
+            "practice": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-24",
+            "title": "Left Rotate an Array by One",
+            "article": "https://example.com/article/rotate-array-one",
+            "youtube": "https://youtu.be/X52mmyGG7Ec?si=gBnewh0Tbqf9qX7a",
+            "practice": "https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-25",
+            "title": "Find Missing Number in Array",
+            "article": "https://example.com/article/find-missing-number",
+            "youtube": "https://youtu.be/gKkP1p26XGs?si=OV6Mxxgv9wz4rnEJ",
+            "practice": "https://leetcode.com/problems/missing-number/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-26",
+            "title": "Count Frequency of Elements",
+            "article": "https://example.com/article/frequency-of-elements",
+            "youtube": "https://youtu.be/jKFsTTctXF0?si=-3iZ0XeoUa1crOmV",
+            "practice": "https://leetcode.com/problems/count-elements-with-maximum-frequency/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-27",
+            "title": "Reverse an Array",
+            "article": "https://example.com/article/reverse-array",
+            "youtube": "https://youtu.be/7EfA0cwZGC0?si=4eDPq9dIFDaTurCX",
+            "practice": "https://www.geeksforgeeks.org/problems/reverse-an-array/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-28",
+            "title": "Count Occurrences of Element",
+            "article": "https://example.com/article/count-occurrences",
+            "youtube": "https://youtu.be/hjR1IYVx9lY?si=spVea7OsMrPzYe48",
+            "practice": "https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array/description/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-29",
+            "title": "Find the Element that Appears Once",
+            "article": "https://example.com/article/element-appears-once",
+            "youtube": "https://youtu.be/5CRbjH0PmeE?si=YCW_UnwEy6MJ9zKC",
+            "practice": "https://leetcode.com/problems/single-number/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-6",
+        "title": "Lec 2: Medium Problems on Arrays",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-30",
+            "title": "Move All Zeros to End",
+            "article": "https://example.com/article/move-zeros-end",
+            "youtube": "https://www.youtube.com/watch?v=aayNRwUN3Do",
+            "practice": "https://leetcode.com/problems/move-zeroes/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-31",
+            "title": "Sort 0s, 1s and 2s (Dutch National Flag Problem)",
+            "article": "https://example.com/article/sort-0-1-2",
+            "youtube": "https://www.youtube.com/watch?v=6sMssUHgaBs",
+            "practice": "https://leetcode.com/problems/sort-colors/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-32",
+            "title": "Find Union of Two Sorted Arrays",
+            "article": "https://example.com/article/union-two-arrays",
+            "youtube": "https://www.youtube.com/watch?v=bqLBZzcq09Q",
+            "practice": "https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-33",
+            "title": "Intersection of Two Arrays",
+            "article": "https://example.com/article/intersection-two-arrays",
+            "youtube": "https://www.youtube.com/watch?v=fwUTXaMom6U",
+            "practice": "https://leetcode.com/problems/intersection-of-two-arrays/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-34",
+            "title": "Leaders in an Array",
+            "article": "https://example.com/article/leaders-in-array",
+            "youtube": "https://www.youtube.com/watch?v=vKsyGawSnyk",
+            "practice": "https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-35",
+            "title": "Longest Subarray with Sum K (Positive Numbers)",
+            "article": "https://example.com/article/longest-subarray-sumk",
+            "youtube": "https://www.youtube.com/watch?v=wHoEiL_tB0c",
+            "practice": "https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-36",
+            "title": "Longest Subarray with Sum K (Both +ve/-ve)",
+            "article": "https://example.com/article/subarray-sumk-all",
+            "youtube": "https://www.youtube.com/watch?v=Wvxz1Jglxjk",
+            "practice": "https://leetcode.com/problems/subarray-sum-equals-k/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-37",
+            "title": "Count Pairs with Given Sum",
+            "article": "https://example.com/article/count-pairs-sum",
+            "youtube": "https://www.youtube.com/watch?v=Srkeu7Y64VM",
+            "practice": "https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum--150253/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-38",
+            "title": "Subarray with Given XOR",
+            "article": "https://example.com/article/subarray-given-xor",
+            "youtube": "https://www.youtube.com/watch?v=lg7cLOP5uLk",
+            "practice": "https://www.interviewbit.com/problems/subarray-with-given-xor/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-39",
+            "title": "Stock Buy and Sell (Max Profit)",
+            "article": "https://example.com/article/stock-buy-sell",
+            "youtube": "https://youtu.be/eMSfBgbiEjk?si=L-iIW37fiznVwjTU",
+            "practice": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-7",
+        "title": "Lec 3: Hard Problems on Arrays",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-40",
+            "title": "Maximum Subarray Sum (Kadane\u2019s Algorithm)",
+            "article": "https://example.com/article/kadanes-algorithm",
+            "youtube": "https://www.youtube.com/watch?v=86CQq3pKSUw",
+            "practice": "https://leetcode.com/problems/maximum-subarray/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-41",
+            "title": "Maximum Product Subarray",
+            "article": "https://example.com/article/maximum-product-subarray",
+            "youtube": "https://www.youtube.com/watch?v=lXVy6YWFcRM",
+            "practice": "https://leetcode.com/problems/maximum-product-subarray/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-42",
+            "title": "Find the Duplicate Number (Cycle Detection)",
+            "article": "https://example.com/article/find-duplicate",
+            "youtube": "https://www.youtube.com/watch?v=wjYnzkAhcNk",
+            "practice": "https://leetcode.com/problems/find-the-duplicate-number/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-43",
+            "title": "Merge Overlapping Intervals",
+            "article": "https://example.com/article/merge-intervals",
+            "youtube": "https://www.youtube.com/watch?v=IexN60k62jo",
+            "practice": "https://leetcode.com/problems/merge-intervals/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-44",
+            "title": "Set Matrix Zeroes",
+            "article": "https://example.com/article/set-matrix-zeroes",
+            "youtube": "https://www.youtube.com/watch?v=N0MgLvceX7M",
+            "practice": "https://leetcode.com/problems/set-matrix-zeroes/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-45",
+            "title": "Spiral Matrix",
+            "article": "https://example.com/article/spiral-matrix",
+            "youtube": "https://www.youtube.com/watch?v=3Zv-s9UUrFM",
+            "practice": "https://leetcode.com/problems/spiral-matrix/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-46",
+            "title": "Rotate Matrix by 90 Degrees",
+            "article": "https://example.com/article/rotate-matrix-90",
+            "youtube": "https://www.youtube.com/watch?v=Z0R2u6gd3GU",
+            "practice": "https://leetcode.com/problems/rotate-image/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-47",
+            "title": "Trapping Rain Water",
+            "article": "https://example.com/article/trapping-rain-water",
+            "youtube": "https://www.youtube.com/watch?v=m18Hntz4go8",
+            "practice": "https://leetcode.com/problems/trapping-rain-water/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-48",
+            "title": "Maximum Subarray Sum in Circular Array",
+            "article": "https://example.com/article/max-circular-subarray",
+            "youtube": "https://www.youtube.com/watch?v=fxT9KjakYPM",
+            "practice": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-49",
+            "title": "Find Median of Two Sorted Arrays",
+            "article": "https://example.com/article/find-median-two-arrays",
+            "youtube": "https://www.youtube.com/watch?v=q6IEA26hvXc",
+            "practice": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-4",
+    "title": "Step 4: Strings Operations",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-8",
+        "title": "Lec 1: Easy Problems on Strings",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-50",
+            "title": "Reverse a String",
+            "article": "https://example.com/article/reverse-string",
+            "youtube": "https://www.youtube.com/watch?v=6RSWf8UgZRk",
+            "practice": "https://leetcode.com/problems/reverse-string/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-51",
+            "title": "Check if String is Palindrome",
+            "article": "https://example.com/article/palindrome-string",
+            "youtube": "https://www.youtube.com/watch?v=sPO8dWm_GIg",
+            "practice": "https://leetcode.com/problems/valid-palindrome/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-52",
+            "title": "Count Vowels and Consonants in a String",
+            "article": "https://example.com/article/count-vowels-consonants",
+            "youtube": "https://www.youtube.com/watch?v=4e2Om0roFsI",
+            "practice": "https://www.geeksforgeeks.org/count-the-number-of-vowels-and-consonants-in-a-string/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-53",
+            "title": "Find the First Non-Repeated Character",
+            "article": "https://example.com/article/first-non-repeated-character",
+            "youtube": "https://www.youtube.com/watch?v=3a5z1-AV4jw",
+            "practice": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-9",
+        "title": "Lec 2: Medium Problems on Strings",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-54",
+            "title": "Longest Substring Without Repeating Characters",
+            "article": "https://example.com/article/longest-substring",
+            "youtube": "https://www.youtube.com/watch?v=wiGpQwVHdE0",
+            "practice": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-55",
+            "title": "String Matching in a 2D Matrix",
+            "article": "https://example.com/article/string-matching-2d-matrix",
+            "youtube": "https://www.youtube.com/watch?v=4IUGF3y3KiA",
+            "practice": "https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-56",
+            "title": "Anagram Check",
+            "article": "https://example.com/article/anagram-check",
+            "youtube": "https://www.youtube.com/watch?v=9UtInBqnCgA",
+            "practice": "https://leetcode.com/problems/valid-anagram/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-57",
+            "title": "Longest Common Prefix",
+            "article": "https://example.com/article/longest-common-prefix",
+            "youtube": "https://www.youtube.com/watch?v=0sWShKIJoo4",
+            "practice": "https://leetcode.com/problems/longest-common-prefix/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-5",
+    "title": "Step 5: Linked List [Single,Double]",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-10",
+        "title": "Lec 1: Single Linked List",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-58",
+            "title": "Reverse a Linked List",
+            "article": "https://example.com/article/reverse-linked-list",
+            "youtube": "https://youtu.be/O0By4Zq0OFc",
+            "practice": "https://leetcode.com/problems/reverse-linked-list/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-59",
+            "title": "Find the Middle of the Linked List",
+            "article": "https://example.com/article/find-middle-linked-list",
+            "youtube": "https://youtu.be/7LjQ57RqgEc?si=hnChIAl7wOC4ESAp",
+            "practice": "https://leetcode.com/problems/middle-of-the-linked-list/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-60",
+            "title": "Detect Cycle in a Linked List",
+            "article": "https://example.com/article/detect-cycle-linked-list",
+            "youtube": "https://youtu.be/2Kd0KKmmHFc",
+            "practice": "https://leetcode.com/problems/linked-list-cycle/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-61",
+            "title": "Merge Two Sorted Linked Lists",
+            "article": "https://example.com/article/merge-sorted-linked-lists",
+            "youtube": "https://youtu.be/XIdigk956u0",
+            "practice": "https://leetcode.com/problems/merge-two-sorted-lists/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-11",
+        "title": "Lec 2: Doubly Linked List",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-62",
+            "title": "Insert Node in a Doubly Linked List",
+            "article": "https://example.com/article/insert-node-doubly-linked-list",
+            "youtube": "https://www.youtube.com/watch?v=le9RuwN2sQg",
+            "practice": "https://www.geeksforgeeks.org/insert-in-doubly-linked-list/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-63",
+            "title": "Delete Node in a Doubly Linked List",
+            "article": "https://example.com/article/delete-node-doubly-linked-list",
+            "youtube": "https://www.youtube.com/watch?v=GHPh8PaHvq8",
+            "practice": "https://www.geeksforgeeks.org/delete-a-node-in-a-doubly-linked-list/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-64",
+            "title": "Reverse a Doubly Linked List",
+            "article": "https://example.com/article/reverse-doubly-linked-list",
+            "youtube": "https://www.youtube.com/watch?v=cYAZZt8GyUs",
+            "practice": "https://www.geeksforgeeks.org/reverse-a-doubly-linked-list/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-6",
+    "title": "Step 6: Recursion",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-12",
+        "title": "Lec 1: Get a Strong Hold",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-65",
+            "title": "Print 1 to N using Recursion",
+            "article": "https://example.com/article/print-1-to-n-recursion",
+            "youtube": "https://www.youtube.com/watch?v=sIvq-wvt9sg",
+            "practice": "https://practice.geeksforgeeks.org/problems/print-n-to-1-without-loop/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-66",
+            "title": "Factorial using Recursion",
+            "article": "https://example.com/article/factorial-using-recursion",
+            "youtube": "https://www.youtube.com/watch?v=_OmRGjbyzno",
+            "practice": "https://practice.geeksforgeeks.org/problems/factorial5739/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-67",
+            "title": "Fibonacci Number using Recursion",
+            "article": "https://example.com/article/fibonacci-using-recursion",
+            "youtube": "https://www.youtube.com/watch?v=LrQjMY0eWC0",
+            "practice": "https://leetcode.com/problems/fibonacci-number/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-68",
+            "title": "Check Palindrome String using Recursion",
+            "article": "https://example.com/article/palindrome-recursion",
+            "youtube": "https://www.youtube.com/watch?v=m5Cx_AQnpfE",
+            "practice": "https://practice.geeksforgeeks.org/problems/palindrome-string0817/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-13",
+        "title": "Lec 2: Subsequence Pattern",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-69",
+            "title": "Print All Subsequences of a String",
+            "article": "https://example.com/article/print-subsequences",
+            "youtube": "https://www.youtube.com/watch?v=omSQS5Hd9FE",
+            "practice": "https://www.geeksforgeeks.org/print-subsequences-string/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-70",
+            "title": "Subset Sum Problem",
+            "article": "https://example.com/article/subset-sum-problem",
+            "youtube": "https://www.youtube.com/watch?v=RVHsKnH0T3k",
+            "practice": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-71",
+            "title": "Generate All Permutations of a String",
+            "article": "https://example.com/article/generate-permutations",
+            "youtube": "https://www.youtube.com/watch?v=GCm7m5671Ps",
+            "practice": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-72",
+            "title": "Combination Sum Problem",
+            "article": "https://example.com/article/combination-sum",
+            "youtube": "https://www.youtube.com/watch?v=GBKI9VSKdGg",
+            "practice": "https://leetcode.com/problems/combination-sum/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-7",
+    "title": "Step 7: Stack & Queues",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-14",
+        "title": "Lec 1: Learning",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-73",
+            "title": "Implement Stack using Arrays",
+            "article": "https://example.com/article/implement-stack-arrays",
+            "youtube": "https://www.youtube.com/watch?v=OrdauJX765Q",
+            "practice": "https://practice.geeksforgeeks.org/problems/implement-stack-using-array/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-74",
+            "title": "Implement Queue using Arrays",
+            "article": "https://example.com/article/implement-queue-arrays",
+            "youtube": "https://www.youtube.com/watch?v=sxBMyFZ4bpE",
+            "practice": "https://practice.geeksforgeeks.org/problems/implement-queue-using-array/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-75",
+            "title": "Implement Stack using Linked List",
+            "article": "https://example.com/article/stack-using-linkedlist",
+            "youtube": "https://www.youtube.com/watch?v=Gzo7yLcBwnI",
+            "practice": "https://practice.geeksforgeeks.org/problems/implement-stack-using-linked-list/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-76",
+            "title": "Implement Queue using Linked List",
+            "article": "https://example.com/article/queue-using-linkedlist",
+            "youtube": "https://www.youtube.com/watch?v=0pl6e-NCgS4",
+            "practice": "https://practice.geeksforgeeks.org/problems/implement-queue-using-linked-list/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-15",
+        "title": "Lec 2: Conversion of Prefix, Infix, Postfix",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-77",
+            "title": "Infix to Postfix Conversion",
+            "article": "https://example.com/article/infix-to-postfix",
+            "youtube": "https://www.youtube.com/watch?v=ysDharaQXkw",
+            "practice": "https://practice.geeksforgeeks.org/problems/infix-to-postfix-1587115620/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-78",
+            "title": "Postfix to Infix Conversion",
+            "article": "https://example.com/article/postfix-to-infix",
+            "youtube": "https://youtu.be/vS_lYbc6BUk?si=MVKIPER-X9BRq_oG",
+            "practice": "https://practice.geeksforgeeks.org/problems/postfix-to-infix-conversion/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-79",
+            "title": "Prefix to Infix Conversion",
+            "article": "https://example.com/article/prefix-to-infix",
+            "youtube": "https://youtu.be/1zqgyoZzda4?si=QM4qozRJc7x-DFQB",
+            "practice": "https://practice.geeksforgeeks.org/problems/prefix-to-infix-conversion/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-80",
+            "title": "Evaluate Postfix Expression",
+            "article": "https://example.com/article/evaluate-postfix",
+            "youtube": "https://www.youtube.com/watch?v=_TGyjXjg04w",
+            "practice": "https://practice.geeksforgeeks.org/problems/evaluation-of-postfix-expression1735/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-8",
+    "title": "Step 8: Sliding Window & Two Pointer (Combined Problems)",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-16",
+        "title": "Lec 1: Medium Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-81",
+            "title": "Longest Substring Without Repeating Characters",
+            "article": "https://example.com/article/longest-substring-without-repeating",
+            "youtube": "https://www.youtube.com/watch?v=wiGpQwVHdE0",
+            "practice": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-82",
+            "title": "Minimum Size Subarray Sum",
+            "article": "https://example.com/article/min-size-subarray-sum",
+            "youtube": "https://www.youtube.com/watch?v=aYqYMIqZx5s",
+            "practice": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-83",
+            "title": "Longest Subarray of 1's After Deleting One Element",
+            "article": "https://example.com/article/longest-subarray-after-delete",
+            "youtube": "https://www.youtube.com/watch?v=1uxfCY5ud6o",
+            "practice": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-17",
+        "title": "Lec 2: Hard Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-84",
+            "title": "Minimum Window Substring",
+            "article": "https://example.com/article/minimum-window-substring",
+            "youtube": "https://www.youtube.com/watch?v=jSto0O4AJbM",
+            "practice": "https://leetcode.com/problems/minimum-window-substring/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-85",
+            "title": "Sliding Window Maximum",
+            "article": "https://example.com/article/sliding-window-maximum",
+            "youtube": "https://www.youtube.com/watch?v=CZQGRp93K4k",
+            "practice": "https://leetcode.com/problems/sliding-window-maximum/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-86",
+            "title": "Subarrays with K Different Integers",
+            "article": "https://example.com/article/subarrays-with-k-diff",
+            "youtube": "https://www.youtube.com/watch?v=yOB-hF7l8qQ",
+            "practice": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-9",
+    "title": "Step 9: Heaps",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-18",
+        "title": "Lec 1: Learning",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-87",
+            "title": "Heap Data Structure Introduction",
+            "article": "https://example.com/article/heap-introduction",
+            "youtube": "https://www.youtube.com/watch?v=t0Cq6tVNRBA",
+            "practice": "https://www.geeksforgeeks.org/heap-data-structure/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-88",
+            "title": "Priority Queue in Depth",
+            "article": "https://example.com/article/priority-queue",
+            "youtube": "https://www.youtube.com/watch?v=XDxLEUgVDMM",
+            "practice": "https://www.geeksforgeeks.org/priority-queue-set-1-introduction/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-89",
+            "title": "Heap Operations: Insert and Delete",
+            "article": "https://example.com/article/heap-operations",
+            "youtube": "https://www.youtube.com/watch?v=MEBPtoCEQdY",
+            "practice": "https://www.geeksforgeeks.org/binary-heap/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-19",
+        "title": "Lec 2: Medium Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-90",
+            "title": "Kth Largest Element in an Array",
+            "article": "https://example.com/article/kth-largest-element",
+            "youtube": "https://www.youtube.com/watch?v=XEmy13g1Qxc",
+            "practice": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-91",
+            "title": "Top K Frequent Elements",
+            "article": "https://example.com/article/top-k-frequent",
+            "youtube": "https://www.youtube.com/watch?v=YPTqKIgVk-k",
+            "practice": "https://leetcode.com/problems/top-k-frequent-elements/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-92",
+            "title": "Find Median from Data Stream",
+            "article": "https://example.com/article/median-data-stream",
+            "youtube": "https://www.youtube.com/watch?v=itmhHWaHupI",
+            "practice": "https://leetcode.com/problems/find-median-from-data-stream/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-20",
+        "title": "Lec 3: Hard Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-93",
+            "title": "Merge K Sorted Lists",
+            "article": "https://example.com/article/merge-k-sorted-lists",
+            "youtube": "https://www.youtube.com/watch?v=q5a5OiGbT6Q",
+            "practice": "https://leetcode.com/problems/merge-k-sorted-lists/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-94",
+            "title": "Minimum Cost to Connect Ropes",
+            "article": "https://example.com/article/min-cost-connect-ropes",
+            "youtube": "https://www.youtube.com/watch?v=tt_pUDsx44g",
+            "practice": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-95",
+            "title": "Smallest Range Covering Elements from K Lists",
+            "article": "https://example.com/article/smallest-range-k-lists",
+            "youtube": "https://www.youtube.com/watch?v=L_0aPFMgGpU",
+            "practice": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-10",
+    "title": "Step 10: Greedy Algorithm",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-21",
+        "title": "Lec 1: Easy Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-96",
+            "title": "Introduction to Greedy Algorithm",
+            "article": "https://www.geeksforgeeks.org/greedy-algorithms/",
+            "youtube": "https://www.youtube.com/watch?v=v0eQ4nXJjsk&pp=ygUgSW50cm9kdWN0aW9uIHRvIEdyZWVkeSBBbGdvcml0aG0%3D",
+            "practice": "",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-97",
+            "title": "Activity Selection Problem",
+            "article": "https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/",
+            "youtube": "https://www.youtube.com/watch?v=32uOuOPXBhc&pp=ygUaQWN0aXZpdHkgU2VsZWN0aW9uIFByb2JsZW0%3D",
+            "practice": "https://www.geeksforgeeks.org/problems/activity-selection-1587115620/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-98",
+            "title": "Fractional Knapsack",
+            "article": "https://www.geeksforgeeks.org/fractional-knapsack-problem/",
+            "youtube": "https://www.youtube.com/watch?v=M79iHjAG1tg&pp=ygUTRnJhY3Rpb25hbCBLbmFwc2Fjaw%3D%3D",
+            "practice": "https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-22",
+        "title": "Lec 2: Medium/Hard Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-99",
+            "title": "Job Sequencing Problem",
+            "article": "https://www.geeksforgeeks.org/job-sequencing-problem/",
+            "youtube": "https://www.youtube.com/watch?v=Tpp7o0jQ-8w&pp=ygUWSm9iIFNlcXVlbmNpbmcgUHJvYmxlbQ%3D%3D",
+            "practice": "https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-100",
+            "title": "Minimum Number of Platforms",
+            "article": "https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/",
+            "youtube": "https://youtu.be/Vsi0n28jZaA?si=4TMkal4zNVXTrEfX",
+            "practice": "https://www.hackerrank.com/contests/kilobyte-uz-contest1/challenges/trains-and-platforms",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-101",
+            "title": "Huffman Coding (Optimal File Compression)",
+            "article": "https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/",
+            "youtube": "https://youtu.be/co4_ahEDCho?si=kYgrB39LkDhQQVAT",
+            "practice": "https://www.hackerrank.com/challenges/tree-huffman-decoding/problem",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-11",
+    "title": "Step 11: Binary Search Trees (BST)",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-24",
+        "title": "Lec 1: Traversals and Basic Operations",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-102",
+            "title": "Introduction to BST and Basic Operations (Insert, Search, Delete)",
+            "article": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/",
+            "youtube": "https://youtu.be/cySVml6e_Fc?si=RbHFI4rtV4k-Tsnm",
+            "practice": "https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-103",
+            "title": "Inorder Traversal of BST (Sorted Order)",
+            "article": "https://www.geeksforgeeks.org/inorder-traversal-of-binary-tree/",
+            "youtube": "https://www.youtube.com/watch?v=XRcC7bAtL3c&t=2s&pp=ygUnSW5vcmRlciBUcmF2ZXJzYWwgb2YgQlNUIChTb3J0ZWQgT3JkZXIp",
+            "practice": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-25",
+        "title": "Lec 2: Medium Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-104",
+            "title": "Lowest Common Ancestor in BST",
+            "article": "https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/",
+            "youtube": "https://www.youtube.com/watch?v=gs2LMfuOR9k&pp=ygUdTG93ZXN0IENvbW1vbiBBbmNlc3RvciBpbiBCU1Q%3D",
+            "practice": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-105",
+            "title": "Validate Binary Search Tree",
+            "article": "https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/",
+            "youtube": "https://youtu.be/s6ATEkipzow?si=oiOaODTlsakWoVdU",
+            "practice": "https://leetcode.com/problems/validate-binary-search-tree/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-106",
+            "title": "Kth Smallest Element in a BST",
+            "article": "https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/",
+            "youtube": "https://youtu.be/5LUXSvjmGCw?si=I5ohIzc5lVHTjY1Y",
+            "practice": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-26",
+        "title": "Lec 3: Hard Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-107",
+            "title": "Recover Binary Search Tree",
+            "article": "https://www.geeksforgeeks.org/fix-two-swapped-nodes-of-bst/",
+            "youtube": "https://youtu.be/eI3lzXlmH2U?si=aEwpEfbvgtrlMfEG",
+            "practice": "https://leetcode.com/problems/recover-binary-search-tree/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-108",
+            "title": "Delete Node in a BST",
+            "article": "https://www.geeksforgeeks.org/deletion-in-binary-search-tree/",
+            "youtube": "https://youtu.be/hL9RUD33nYs?si=tO3OfU-6VYIFMeCS",
+            "practice": "https://leetcode.com/problems/delete-node-in-a-bst/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-109",
+            "title": "Closest Binary Search Tree Value II",
+            "article": "https://www.geeksforgeeks.org/find-the-closest-binary-search-tree-value-ii/",
+            "youtube": "https://youtu.be/YZFfZ3nh3sY?si=12fz1a81nRka5ezA",
+            "practice": "https://leetcode.com/problems/closest-binary-search-tree-value-ii/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-12",
+    "title": "Step 12: Graphs",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-27",
+        "title": "Lec 1: Learning",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-110",
+            "title": "Graph Representation (Adjacency List, Matrix)",
+            "article": "https://www.geeksforgeeks.org/graph-and-its-representations/",
+            "youtube": "https://youtu.be/5hPfm_uqXmw?si=yeFqmh5HuritZpgq",
+            "practice": "",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-111",
+            "title": "Minimum Spanning Tree (Prim’s algorithm)",
+            "article": "https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/",
+            "youtube": "https://youtu.be/_KX8GDvRzBc?si=SaqLeKktMRrrHJSn",
+            "practice": "",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-112",
+            "title": "Minimum Spanning Tree (Kruskal’s algorithm)",
+            "article": "https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/",
+            "youtube": "https://youtu.be/huQojf2tevI?si=mJ-o___JQQCTZ-zY",
+            "practice": "",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-28",
+        "title": "Lec 2: Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-113",
+            "title": "Detect Cycle in Directed Graph (DFS & BFS)",
+            "article": "https://www.geeksforgeeks.org/detect-cycle-in-a-directed-graph-using-bfs/",
+            "youtube": "https://youtu.be/AK7BuT5MgU0?si=EFOiaxUUFR7p41xH",
+            "practice": "https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-114",
+            "title": "Topological Sort",
+            "article": "https://www.geeksforgeeks.org/topological-sorting/",
+            "youtube": "https://youtu.be/3tkcfvCNtM8?si=XxjTSRkk1I0hauzB",
+            "practice": "https://leetcode.com/problems/course-schedule-ii/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-115",
+            "title": "Shortest Path in Graph (Dijkstra’s Algorithm)",
+            "article": "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
+            "youtube": "https://youtu.be/Gd92jSu_cZk?si=sOLxNXE2unhq1Qse",
+            "practice": "https://leetcode.com/problems/network-delay-time/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-116",
+            "title": "Depth First Search (DFS)",
+            "article": "https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/",
+            "youtube": "https://youtu.be/f8luGFRtshY?si=4hzVZFFoN2xzogZG",
+            "practice": "https://leetcode.com/problems/number-of-islands/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-117",
+            "title": "Breadth First Search (BFS)",
+            "article": "https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/",
+            "youtube": "https://youtu.be/qul0f79gxGs?si=QVgJG55P65KCvEUo",
+            "practice": "https://leetcode.com/problems/course-schedule/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "subject-13",
+    "title": "Step 13: Dynamic Programming",
+    "expanded": false,
+    "topics": [
+      {
+        "id": "topic-29",
+        "title": "Lec 1: Introduction",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-118",
+            "title": "What is Dynamic Programming?",
+            "article": "https://www.geeksforgeeks.org/introduction-to-dynamic-programming-data-structures-and-algorithm-tutorials/",
+            "youtube": "https://www.youtube.com/watch?v=0BhhiQGDbEA",
+            "practice": "",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-119",
+            "title": "Memoization vs Tabulation",
+            "article": "https://www.geeksforgeeks.org/tabulation-vs-memoization/",
+            "youtube": "https://youtu.be/PsHkCXEdf78?si=WVWrF--jMYbQkSjo",
+            "practice": "https://leetcode.com/tag/dynamic-programming/",
+            "difficulty": "Easy",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      },
+      {
+        "id": "topic-30",
+        "title": "Lec 2: Problems",
+        "expanded": false,
+        "resources": [
+          {
+            "id": "resource-120",
+            "title": "0/1 Knapsack Problem",
+            "article": "https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/",
+            "youtube": "https://youtu.be/nLmhmB6NzcM?si=suqsrmkZHWf804jX",
+            "practice": "https://leetcode.com/problems/partition-equal-subset-sum/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-121",
+            "title": "Longest Common Subsequence",
+            "article": "https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/",
+            "youtube": "https://youtu.be/sSno9rV8Rhg?si=-bQ-lpWA-gxjavWd",
+            "practice": "https://leetcode.com/problems/longest-common-subsequence/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-122",
+            "title": "Longest Increasing Subsequence",
+            "article": "https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/",
+            "youtube": "https://youtu.be/CE2b_-XfVDk?si=n4RYbD_O4cew4Luo",
+            "practice": "https://leetcode.com/problems/longest-increasing-subsequence/",
+            "difficulty": "Medium",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          },
+          {
+            "id": "resource-123",
+            "title": "Edit Distance Problem",
+            "article": "https://www.geeksforgeeks.org/edit-distance-dp-5/",
+            "youtube": "https://youtu.be/b6AGUjqIPsA?si=jB7czd7k5KfnfS_8",
+            "practice": "https://leetcode.com/problems/edit-distance/",
+            "difficulty": "Hard",
+            "completed": false,
+            "markedForRevision": false,
+            "notes": ""
+          }
+        ]
+      }
+    ]
+  }
+]

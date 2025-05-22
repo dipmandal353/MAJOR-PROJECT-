@@ -23,16 +23,40 @@
 .question-form select,
 .question-form button {
   width: 100%;
+  max-height: auto;
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  resize: vertical;  /* Allows resizing if needed */
+  min-height: 3rem;  /* Set a minimum height for the textarea */
 }
 
 .question-form input:focus,
 .question-form select:focus,
 .question-form button:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling for the textarea */
+.question-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;  
+  min-height: 3rem;  
+  min-width: 35rem;
+  box-sizing: border-box;  
+}
+
+/* Focus state for textarea */
+.question-form textarea:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);

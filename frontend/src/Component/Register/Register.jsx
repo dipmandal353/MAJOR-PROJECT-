@@ -1,21 +1,28 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { useTextAnimation } from '/src/hooks/useTextAnimation';
-import axios from "axios";
-import toast, { Toaster } from "react-hot-toast";
-import "./Register.css";
-import { useAuth } from "../../Context/AuthProvider";
-import { Link } from "react-router-dom";
+"use client"
+
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { useForm } from "react-hook-form"
+import { useTextAnimation } from "/src/hooks/useTextAnimation"
+import axios from "axios"
+import toast from "react-hot-toast"
+import "./Register.css"
+import { useAuth } from "../../Context/AuthProvider"
+import { Link } from "react-router-dom"
+import { useIsMobile } from "./useIsMobile"
 
 const Register = ({ isSignIn: initialIsSignIn, setIsSignIn }) => {
-  const [authUser, setAuthUser] = useAuth();
-  const navigate = useNavigate();
+  const [authUser, setAuthUser] = useAuth()
+  const navigate = useNavigate()
+  const [isSignIn, setLocalIsSignIn] = useState(initialIsSignIn)
+  const isMobile = useIsMobile()
 
-  // Local state for toggling Sign In/Sign Up mode
-  const [isSignIn, setLocalIsSignIn] = useState(initialIsSignIn);
+  // Move hook calls outside of conditional rendering
+  const welcomeBackText = useTextAnimation("Welcome Back!", 300, 1000)
+  const keepConnectedText = useTextAnimation("To keep connected, please log in with your personal info", 100, 1000)
+  const helloFriendText = useTextAnimation("Hello, Friend!", 300, 1000)
+  const personalDetailsText = useTextAnimation("Enter your personal details and start your journey with us", 100, 1000)
 
-  // React Hook Form initialization with dynamic validation
   const {
     register,
     handleSubmit,
@@ -24,206 +31,305 @@ const Register = ({ isSignIn: initialIsSignIn, setIsSignIn }) => {
     watch,
     formState: { errors, isSubmitting },
   } = useForm({
-    mode: "onBlur", // Validation occurs onBlur (field loses focus)
-  });
+    mode: "onBlur",
+  })
 
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState("")
+  const [loginPassword, setLoginPassword] = useState("")
 
-  // Delay function for simulating network delays
-  const delay = (d) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, d * 1000);
-    });
-  };
-
-  // Handle Registration
   const handleSignUp = async (data) => {
     try {
-      // Simulate a network delay of 2 seconds
-      await delay(2);
-
-      const response = await axios.post("https://prepmonkex.onrender.com/api/v1/user/register", data);
-
-      localStorage.setItem("MockApp", JSON.stringify(response.data));
-      setAuthUser(response.data);
-
-      toast.success(response.data.message || "User registered successfully!");
-      reset(); // Reset form fields after successful registration
-      setLocalIsSignIn(true); // Switch to sign-in mode after registration
-      navigate("/Dashboard"); // Navigate to Dashboard after successful registration
+      const response = await axios.post("/api/v1/user/register", data)
+      localStorage.setItem("MockApp", JSON.stringify(response.data))
+      setAuthUser(response.data)
+      toast.success(response.data.message || "User registered successfully!")
+      reset()
+      setLocalIsSignIn(true)
+      navigate("/Dashboard")
     } catch (error) {
-      toast.error(
-        error.response?.data?.message || "An error occurred during registration."
-      );
+      toast.error(error.response?.data?.message || "An error occurred during registration.")
     }
-  };
+  }
 
-  // Handle Login
   const handleSignIn = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      // Simulate a network delay of 2 seconds
-      await delay(2);
-
-      const response = await axios.post("https://prepmonkex.onrender.com/api/v1/user/login", {
+      const response = await axios.post("/api/v1/user/login", {
         email: loginEmail,
         password: loginPassword,
-      });
-
-      localStorage.setItem("MockApp", JSON.stringify(response.data));
-      setAuthUser(response.data);
-
-      toast.success(response.data.message || "Logged in successfully!");
-      navigate("/Dashboard"); // Redirects to the Dashboard after sign-in
+      })
+      localStorage.setItem("MockApp", JSON.stringify(response.data))
+      setAuthUser(response.data)
+      toast.success(response.data.message || "Logged in successfully!")
+      navigate("/Dashboard")
     } catch (error) {
-      toast.error(error.response?.data?.message || "Invalid login credentials.");
+      toast.error(error.response?.data?.message || "Invalid login credentials.")
     }
-  };
+  }
 
   return (
     <div className="login-page">
-      <div class="shape-container">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-      </div>
-    <div
-      className={`app-container ${isSignIn ? "sign-in-mode" : "sign-up-mode"}`}
-    >
-      
-
-      {/* Sign-Up Section */}
-      <div className="form-container sign-up-container">
-      <form onSubmit={handleSubmit(handleSignUp)} className={isSignIn ? "hidden" : ""}>
-  <h1>Register</h1>
-  <div className="infield">
-    <input
-      {...register("name", {
-        required: { value: true, message: "Name is required" },
-      })}
-      type="text"
-      placeholder="Name"
-    />
-    <label>Name</label>
-    {errors.name && <span className="error">{errors.name.message}</span>}
-  </div>
-  <div className="infield">
-    <input
-      {...register("email", {
-        required: { value: true, message: "Email is required" },
-        pattern: {
-          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-          message: "Invalid email address",
-        },
-      })}
-      type="email"
-      placeholder="Email"
-    />
-    <label>Email</label>
-    {errors.email && <span className="error">{errors.email.message}</span>}
-  </div>
-  <div className="infield">
-    <input
-      {...register("password", {
-        required: { value: true, message: "Password is required" },
-        minLength: {
-          value: 6,
-          message: "Password must be at least 6 characters long",
-        },
-      })}
-      type="password"
-      placeholder="Password"
-    />
-    <label>Password</label>
-    {errors.password && <span className="error">{errors.password.message}</span>}
-  </div>
-  <div className="infield">
-    <input
-      {...register("confirmPassword", {
-        required: { value: true, message: "Confirm Password is required" },
-        validate: (value) =>
-          value === watch("password") || "Passwords do not match",
-      })}
-      type="password"
-      placeholder="Confirm Password"
-    />
-    <label>Confirm Password</label>
-    {errors.confirmPassword && (
-      <span className="error">{errors.confirmPassword.message}</span>
-    )}
-  </div>
-  
-  <button className='Register-button' type="submit" disabled={isSubmitting}>
-    Register
-  </button>
-  
-</form>
-
+      <div className="shape-container">
+        {[...Array(10)].map((_, i) => (
+          <div className="shape" key={i}></div>
+        ))}
       </div>
 
-      {/* Sign-In Section */}
-      <div className="form-container sign-in-container">
-        <form onSubmit={handleSignIn} className={isSignIn ? "" : "hidden"}>
-          <h1>Login</h1>
-          <div className="infield">
-            <input
-              type="email"
-              placeholder="Email"
-              value={loginEmail}
-              onChange={(e) => setLoginEmail(e.target.value)}
-              required
-            />
-            <label>Email</label>
+      {isMobile ? (
+        <div className="mobile-container">
+          <div className="tab-switch">
+            <button
+              className={isSignIn ? "active-tab" : ""}
+              onClick={() => {
+                setLocalIsSignIn(true)
+                if (setIsSignIn) setIsSignIn(true)
+              }}
+            >
+              Login
+            </button>
+            <button
+              className={!isSignIn ? "active-tab" : ""}
+              onClick={() => {
+                setLocalIsSignIn(false)
+                if (setIsSignIn) setIsSignIn(false)
+              }}
+            >
+              Register
+            </button>
           </div>
-          <div className="infield">
-            <input
-              type="password"
-              placeholder="Password"
-              value={loginPassword}
-              onChange={(e) => setLoginPassword(e.target.value)}
-              required
-            />
-            <label>Password</label>
-          </div>
-          <Link to="#" className="forgot">
-            Forgot your password?
-          </Link>
-          {/* <div className='Register-button'> */}
-          <button className='Register-button' type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Logging in..." : "Login"}
-          </button>
-          {/* </div> */}
-        </form>
-      </div>
 
-      {/* Overlay Section */}
-      <div className="overlay-container">
-        <div className="overlay">
-          <div className="overlay-panel overlay-left">
-            <h1>{useTextAnimation('Welcome Back!',150,1000)}</h1>
-            <p>{useTextAnimation('To keep connected, please log in with your personal info',32,1000)}</p>
-            <button onClick={() => setLocalIsSignIn(true)}>Login</button>
-          </div>
-          <div className="overlay-panel overlay-right">
-            <h1>{useTextAnimation('Hello, Friend!',150,1000)}</h1>
-            <p>{useTextAnimation('Enter your personal details and start your journey with us',32,1000)}</p>
-            <button onClick={() => setLocalIsSignIn(false)}>Register</button>
+          <div className="form-container-mobile">
+            {isSignIn ? (
+              <form onSubmit={handleSignIn}>
+                <h1>Login</h1>
+                <div className="infield">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={loginEmail}
+                    onChange={(e) => setLoginEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="infield">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
+                    required
+                  />
+                </div>
+                <Link to="#" className="forgot">
+                  Forgot your password?
+                </Link>
+                <div className="button-wrapper">
+                  <button className="Register-button" type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Logging in..." : "Login"}
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <form onSubmit={handleSubmit(handleSignUp)}>
+                <h1>Register</h1>
+
+                <div className="infield">
+                  <input
+                    className={errors.name ? "input-error" : ""}
+                    {...register("name", {
+                      required: { value: true, message: "Name is required" },
+                    })}
+                    type="text"
+                    placeholder="Name"
+                  />
+                  {errors.name && <span className="error-msg">{errors.name.message}</span>}
+                </div>
+
+                <div className="infield">
+                  <input
+                    className={errors.email ? "input-error" : ""}
+                    type="email"
+                    placeholder="Email"
+                    {...register("email", {
+                      required: { value: true, message: "Email is required" },
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Invalid email address",
+                      },
+                    })}
+                  />
+                  {errors.email && <span className="error-msg">{errors.email.message}</span>}
+                </div>
+
+                <div className="infield">
+                  <input
+                    className={errors.password ? "input-error" : ""}
+                    type="password"
+                    placeholder="Password"
+                    {...register("password", {
+                      required: { value: true, message: "Password is required" },
+                      minLength: {
+                        value: 6,
+                        message: "Password must be at least 6 characters long",
+                      },
+                    })}
+                  />
+                  {errors.password && <span className="error-msg">{errors.password.message}</span>}
+                </div>
+
+                <div className="infield">
+                  <input
+                    className={errors.confirmPassword ? "input-error" : ""}
+                    type="password"
+                    placeholder="Confirm Password"
+                    {...register("confirmPassword", {
+                      required: { value: true, message: "Confirm Password is required" },
+                      validate: (value) => value === watch("password") || "Passwords do not match",
+                    })}
+                  />
+                  {errors.confirmPassword && <span className="error-msg">{errors.confirmPassword.message}</span>}
+                </div>
+
+                <div className="button-wrapper">
+                  <button className="Register-button" type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting" : "Submit"}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
-      </div>
-    </div>
-    </div>
-  );
-};
+      ) : (
+        <div className={`app-container ${isSignIn ? "sign-in-mode" : "sign-up-mode"}`}>
+          <div className="form-container sign-up-container">
+            <form onSubmit={handleSubmit(handleSignUp)} className={isSignIn ? "hidden" : ""}>
+              <h1>Register</h1>
+              <div className="infield">
+                <input
+                  className={errors.name ? "input-error" : ""}
+                  {...register("name", {
+                    required: { value: true, message: "Name is required" },
+                  })}
+                  type="text"
+                  placeholder="Name"
+                />
+                {errors.name && <span className="error-msg">{errors.name.message}</span>}
+              </div>
+              <div className="infield">
+                <input
+                  className={errors.email ? "input-error" : ""}
+                  type="email"
+                  placeholder="Email"
+                  {...register("email", {
+                    required: { value: true, message: "Email is required" },
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                {errors.email && <span className="error-msg">{errors.email.message}</span>}
+              </div>
+              <div className="infield">
+                <input
+                  className={errors.password ? "input-error" : ""}
+                  type="password"
+                  placeholder="Password"
+                  {...register("password", {
+                    required: { value: true, message: "Password is required" },
+                    minLength: {
+                      value: 6,
+                      message: "Password must be at least 6 characters long",
+                    },
+                  })}
+                />
+                {errors.password && <span className="error-msg">{errors.password.message}</span>}
+              </div>
+              <div className="infield">
+                <input
+                  className={errors.confirmPassword ? "input-error" : ""}
+                  type="password"
+                  placeholder="Confirm Password"
+                  {...register("confirmPassword", {
+                    required: { value: true, message: "Confirm Password is required" },
+                    validate: (value) => value === watch("password") || "Passwords do not match",
+                  })}
+                />
+                {errors.confirmPassword && <span className="error-msg">{errors.confirmPassword.message}</span>}
+              </div>
+              <input
+                className="Register-button"
+                type="submit"
+                disabled={isSubmitting}
+                value={isSubmitting ? "Submitting" : "Submit"}
+              />
+            </form>
+          </div>
 
-export default Register;
+          <div className="form-container sign-in-container">
+            <form onSubmit={handleSignIn} className={isSignIn ? "" : "hidden"}>
+              <h1>Login</h1>
+              <div className="infield">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={loginEmail}
+                  onChange={(e) => setLoginEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="infield">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={loginPassword}
+                  onChange={(e) => setLoginPassword(e.target.value)}
+                  required
+                />
+              </div>
+              <Link to="#" className="forgot">
+                Forgot your password?
+              </Link>
+              <div className="button-wrapper">
+                <button className="Register-button" type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "Logging in..." : "Login"}
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div className="overlay-container">
+            <div className="overlay">
+              <div className="overlay-panel overlay-left">
+                <h1>{welcomeBackText}</h1>
+                <p>{keepConnectedText}</p>
+                <button
+                  onClick={() => {
+                    setLocalIsSignIn(true)
+                    if (setIsSignIn) setIsSignIn(true)
+                  }}
+                >
+                  Login
+                </button>
+              </div>
+              <div className="overlay-panel overlay-right">
+                <h1>{helloFriendText}</h1>
+                <p>{personalDetailsText}</p>
+                <button
+                  onClick={() => {
+                    setLocalIsSignIn(false)
+                    if (setIsSignIn) setIsSignIn(false)
+                  }}
+                >
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default Register

@@ -1,98 +1,163 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* Custom styles */
-.dashboard-header {
-  @apply sticky top-0 z-10;
+.enhanced-page-container {
+  height: auto;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #2f2f53, #16213e, #0f3460);
+  color: #d4d4dc;
+  font-family: Arial, sans-serif;
+  margin-top: -40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 2rem;
 }
 
-.dashboard-title {
-  @apply text-2xl font-bold text-gray-900;
+.enhanced-page-main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 110px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: -10px;
 }
 
-.profile-button {
-  @apply flex items-center text-white transition-colors duration-200;
-  background-color: #4CAF50; /* Green background for profile */
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+.enhanced-page-welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
 }
 
-.signout-button {
-  @apply flex items-center text-white transition-colors duration-200;
-  background-color: #F44336; /* Red background for sign out */
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+.enhanced-page-study-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.profile-button:hover {
-  background-color: #388E3C; /* Darker green on hover */
+.enhanced-page-option-card {
+  background-color: #9a9ac6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+  width: 300px;
 }
 
-.signout-button:hover {
-  background-color: #D32F2F; /* Darker red on hover */
+.enhanced-page-option-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-.study-option-card {
-  @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 h-full flex flex-col;
+.enhanced-page-icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.study-option-icon {
-  @apply flex items-center justify-center w-12 h-12 rounded-full mb-4;
+.enhanced-page-card-icon {
+  font-size: 1.5rem;
+  color: #be9292;
 }
 
-.study-option-title {
-  @apply text-xl font-semibold text-gray-900 mb-2;
+.enhanced-page-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f0e0e;
+  margin-bottom: 0.5rem;
 }
 
-.study-option-description {
-  @apply text-gray-600 flex-grow;
+.enhanced-page-card-description {
+  font-size: 1.2rem;
+  color: #141417;
 }
 
-/* Color-specific backgrounds for study option icons */
-.bg-blue-100 { background-color: #BBDEFB; }
-.bg-green-100 { background-color: #C8E6C9; }
-.bg-purple-100 { background-color: #E1BEE7; }
-.bg-yellow-100 { background-color: #FFF9C4; }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .dashboard-header {
-    @apply px-4;
+/* Responsive Tweaks */
+@media (max-width: 992px) {
+  .enhanced-page-main {
+    padding: 100px 2rem;
   }
 
-  .study-options-grid {
-    @apply grid-cols-1;
+  .enhanced-page-welcome-text{
+    margin-top: 10px;
+  }
+
+  .enhanced-page-study-options {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .enhanced-page-option-card {
+    width: 90%;
+    max-width: 300px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .study-options-grid {
-    @apply grid-cols-2;
+@media (min-width: 481px) and (max-width: 576px) {
+  .enhanced-page-main {
+    padding: 90px 1.2rem;
+    /* margin-bottom: 50px; */
+  }
+
+  .enhanced-page-welcome-text{
+    margin-top: 20px;
+  }
+
+  .enhanced-page-study-options {
+    grid-template-columns: 1fr;
+  }
+
+  .enhanced-page-option-card {
+    width: 100%;
+  }
+
+  .enhanced-page-welcome-text {
+    font-size: 1.6rem;
+  }
+
+  .enhanced-page-card-title {
+    font-size: 1.3rem;
+  }
+
+  .enhanced-page-card-description {
+    font-size: 1rem;
   }
 }
 
-@media (min-width: 1025px) {
-  .study-options-grid {
-    @apply grid-cols-4;
+@media (max-width: 360px) {
+  .enhanced-page-card-title {
+    font-size: 1.2rem;
+  }
+
+  .enhanced-page-card-description {
+    font-size: 0.95rem;
+  }
+
+  .enhanced-page-option-card {
+    padding: 1.2rem;
+    height: auto;
   }
 }
+.with-header-offset {
+  margin-top: 80px; /* Adjust this to match your header height */
+}
+@media (max-width: 480px) {
+  .with-header-offset {
+    margin-top: 70px; /* slightly smaller on small screens */
+  }
 
-/* Animation for hover effect */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
+  .enhanced-page-option-card {
+    padding: 1.2rem;
+    height: auto;
   }
 }
-
-.study-option-card:hover {
-  animation: float 3s ease-in-out infinite;
-}
-
-

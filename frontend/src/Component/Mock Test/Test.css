@@ -81,7 +81,7 @@
 }
 
 .mock-test-question-box.visited {
-  background-color: #4caf50; /* Visited question color */
+  background-color: #848dd6; /* Visited question color */
   color: rgb(255, 255, 255);
 }
 
@@ -99,9 +99,14 @@
   color: white;
 }
 
-.mock-test-question-box:hover {
-  background-color: var(--primary-blue);
+.mock-test-question-box.answered {
+  background-color: #0ab231; /* Blue for answered questions */
+  color: white;
 }
+
+/* .mock-test-question-box:hover {
+  background-color: var(--primary-blue);
+} */
 
 .mock-test-content {
   flex: 1;
@@ -117,6 +122,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   flex-grow: 1;
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .mock-test-question h2 {
@@ -129,6 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  
 }
 
 .mock-test-option {
@@ -150,13 +158,14 @@
   width: 20px;
   height: 20px;
   border: 2px solid #bdc3c7;
+  outline: none;
 }
 
 .mock-test-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
+  /* margin-top: auto; */
   padding-top: 20px;
 }
 
@@ -173,6 +182,12 @@
   background-color: #3498db;
   color: white;
 }
+.mock-test-nav-button.previous:disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Visually indicate the button is disabled */
+  background-color: #ccc; /* Optional: lighter background color */
+  color: #666; /* Optional: lighter text color */
+}
 
 .mock-test-nav-button.review {
   background-color: var(--review-yellow);
@@ -182,6 +197,12 @@
 .mock-test-nav-button.next {
   background-color: var(--primary-blue);
   color: white;
+}
+.mock-test-nav-button.next:disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Visually indicate the button is disabled */
+  background-color: #ccc; /* Optional: lighter background color */
+  color: #666; /* Optional: lighter text color */
 }
 
 .mock-test-submit {
@@ -200,3 +221,84 @@
 .mock-test-submit:hover {
   background-color: #219a52;
 }
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .mock-test-wrapper {
+    flex-direction: column;
+  }
+
+  .mock-test-sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .mock-test-content {
+    padding: 20px;
+  }
+
+  .mock-test-navigation {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .mock-test-nav-button {
+    width: 100%;
+  }
+
+  .mock-test-question-numbers {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+
+  .mock-test-question-box {
+    font-size: 0.7rem;
+    width: 70px;
+    height: 60px;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+}
+
+@media (max-width: 480px) {
+  .mock-test-question-numbers {
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    gap: 4px;
+  }
+
+  .mock-test-question-box {
+    font-size: 0.75rem;
+    padding: 8px;
+    border-radius: 3px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .mock-test-timer {
+    font-size: 2rem;
+  }
+
+  .mock-test-question h2 {
+    font-size: 1.2rem;
+  }
+
+  .mock-test-option {
+    padding: 10px;
+  }
+
+  .mock-test-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* Disable horizontal scroll */
+body, html {
+  overflow-x: hidden;
+}
+
+

@@ -1,45 +1,43 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Mock.css';
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import mockTestData from "./mockTestData"; // adjust path accordingly
+import "./Mock.css";
 
 const MockPage = () => {
+  const { category } = useParams();
   const navigate = useNavigate();
-
-  const subjects = [
-    { name: "C Programming", category: "Computer Science" },
-    { name: "OOPs using C++", category: "Computer Science" },
-    { name: "RDBMS", category: "Computer Science" },
-    { name: "Networking", category: "Computer Science" },
-    { name: "Machine Learning", category: "Computer Science" },
-    { name: "Operating System", category: "Computer Science" },
-    { name: "JAVA", category: "Computer Science" },
-  ];
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const subjects = mockTestData[category] || [];
 
   return (
     <div className="subject-page">
-      <aside className="sidebar">
+      <button className="hamburger" onClick={() => setSidebarOpen(!isSidebarOpen)}>
+        ☰
+      </button>
+
+      <aside className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <div className="sidebar-header">Dashboard</div>
         <ul>
           <li onClick={() => navigate("/")}>Home</li>
-          <li onClick={() => navigate("/profile")}>Profile</li>
+          <li onClick={() => navigate("/userprofile")}>Profile</li>
           <li onClick={() => navigate("/register")}>Sign Up</li>
-          <li onClick={() => navigate("/register")}>Sign Out</li>
         </ul>
       </aside>
 
       <div className="main-content">
-        <h1 className="page-title">Mock Test Subjects</h1>
+        <h1 className="page-title">{category.toUpperCase()} Mock Test</h1>
         <div className="subject-container">
           {subjects.map((subject, index) => (
             <div key={index} className="subject-box">
               <h3 className="subject-name">{subject.name}</h3>
-              <div className="hover-content">
+              <div className="subject-content">
                 <button
-                  onClick={() => navigate(`/youtube`)}
-                  className="dropdown-link"
+                  className="subject-dropdown-link"
+                  onClick={() => window.open(subject.URL, "_blank")}
                 >
                   YouTube Link
                 </button>
+
                 <button
                   onClick={() =>
                     navigate(
@@ -48,32 +46,33 @@ const MockPage = () => {
                       )}`
                     )
                   }
-                  className="dropdown-link"
+                  className="subject-dropdown-link"
                 >
                   Practice Set
                 </button>
-                <button onClick={() =>
-    navigate(
-      `/instruction?category=${encodeURIComponent(subject.category)}&subjectName=${encodeURIComponent(subject.name)}`
-    )
-  }
-  className="dropdown-link"
->
-  Mock Test
-</button>
-
+                <button
+                  onClick={() =>
+                    navigate(
+                      `/instruction?category=${encodeURIComponent(subject.category)}&subjectName=${encodeURIComponent(
+                        subject.name
+                      )}`
+                    )
+                  }
+                  className="subject-dropdown-link"
+                >
+                  Mock Test
+                </button>
               </div>
             </div>
           ))}
-          
           <div
-            className="subject-box new-subject-box"
-            onClick={() => navigate("/CS_MockTest")}
+            className="new-subject-box"
+            onClick={() => navigate(`/CS_MockTest/${category}`)}
+            style={{ cursor: "pointer" }}
           >
-            <h4 className="subject-name">
-              Full Mock Test on all Computer Science topics
-            </h4>
+            <h4 className="subject-name">Full Mock Test</h4>
           </div>
+
         </div>
       </div>
     </div>
@@ -81,4 +80,3 @@ const MockPage = () => {
 };
 
 export default MockPage;
-

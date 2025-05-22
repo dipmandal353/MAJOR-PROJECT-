@@ -14,9 +14,12 @@ export const AuthProvider = ({ children }) => {
   const role = authUser?.user?.role; // Extract role
   const token = authUser?.token; // Extract token
   const name = authUser?.user?.name;
+  const email = authUser?.user?.email
+
+
 
   return (
-    <AuthContext.Provider value={[authUser, setAuthUser, role, token, name]}>
+    <AuthContext.Provider value={[authUser, setAuthUser, role, token, name, email]}>
     {children}
   </AuthContext.Provider>
   );

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './instruction.css';
-
+import './Instruction.css';
 const InstructionPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -10,33 +9,44 @@ const InstructionPage = () => {
   const categories = queryParams.getAll('category');
   const subjectNames = queryParams.getAll('subjectName');
 
-  const maxQuestions = 20;
+  const maxQuestions = 50;
   const [questionCount, setQuestionCount] = useState(10);
 
   const handleSliderChange = (event) => {
-    setQuestionCount(parseInt(event.target.value, 10));
+    setQuestionCount(Math.min(maxQuestions, Math.max(1, parseInt(event.target.value, 10))));
   };
 
   const handleStart = () => {
-    // Create a new URLSearchParams object
-    const params = new URLSearchParams();
-    
-    // Add the category (assuming it's common for all subjects)
-    if (categories.length > 0) {
-      params.append('category', categories[0]);
-    }
-    
-    // Add each subject name as a separate 'subjectName' parameter
-    subjectNames.forEach(subject => {
-      params.append('subjectName', subject);
-    });
-    
-    // Add the question count
-    params.append('questionCount', questionCount);
+  if (categories.length === 0 || subjectNames.length === 0) {
+    alert("Please select at least one subject.");
+    return;
+  }
 
-    // Navigate with the properly formatted query string
-    navigate(`/mocktest?${params.toString()}`);
-  };
+  const params = new URLSearchParams();
+
+  
+
+  // ✅ Get unique categories from the selection
+  const uniqueCategories = [...new Set(categories)];
+  if (uniqueCategories.length === 1) {
+    // ✅ If all subjects share the same category, only add once
+    params.append("category", uniqueCategories[0]);
+  } else {
+    // ✅ Else include all categories
+    uniqueCategories.forEach(cat => params.append("category", cat));
+  }
+
+  // ✅ Append all selected subjects
+  subjectNames.forEach(subject => params.append("subjectName", subject));
+
+  
+  // ✅ Add question count
+  params.append("questionCount", questionCount);
+
+  // ✅ Navigate
+  navigate(`/mocktest?${params.toString()}`);
+};
+
 
   return (
     <div className="instruction-page">
@@ -88,3 +98,4 @@ const InstructionPage = () => {
 };
 
 export default InstructionPage;
+

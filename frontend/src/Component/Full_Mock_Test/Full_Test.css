@@ -159,3 +159,68 @@
   .Start_button_text {
     font-size: 1.5rem;
   }
+
+  /* Small Phones (<= 480px): 1 column */
+@media screen and (max-width: 480px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-heading {
+    font-size: 1.7rem;
+  }
+
+  .topic label {
+    font-size: 1.1rem;
+  }
+
+  .select-all label {
+    font-size: 1.1rem;
+  }
+
+  .Start_button {
+    padding: 0.6rem;
+  }
+
+  .Start_button_text {
+    font-size: 1.1rem;
+  }
+
+  .topic input[type="checkbox"],
+  .select-all input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+/* Medium devices (481px to 768px): 2 columns */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .quiz-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    white-space: normal;
+  }
+
+  .topic label,
+  .select-all label {
+    font-size: 1.3rem;
+  }
+
+  .Start_button_text {
+    font-size: 1.3rem;
+  }
+
+  .topic,
+  .select-all {
+    font-size: 1.2rem;
+  }
+}
