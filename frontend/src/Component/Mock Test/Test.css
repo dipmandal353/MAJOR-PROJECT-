@@ -16,7 +16,9 @@
   display: flex;
   min-height: 100vh;
   background-color: #f8f9fa;
+  position: relative; /* Add this line */
 }
+
 
 .mock-test-sidebar {
   width: 280px;
@@ -221,6 +223,20 @@
 .mock-test-submit:hover {
   background-color: #219a52;
 }
+
+.mock-test-webcam-floating-center {
+  position: absolute;
+  left: 180px; /* just to the right of the sidebar */
+  top: 10px; 
+  z-index: 1000;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
 
 /* Responsive layout adjustments */
 @media (max-width: 768px) {

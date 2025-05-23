@@ -91,7 +91,7 @@ const Homepage = () => {
             { name: 'MOCK TEST', image: 'src/assets/mocktest.png', path: '/testTopics' },
             { name: 'INTERVIEW PREPARATION', image: 'src/assets/interview.jpg', path: '/inttypes' },
             { name: 'DSA ROADMAP', image: 'src/assets/dsa.png', path: '/dsa' },
-            { name: 'QUIZ', image: 'src/assets/quiz.jpg', path: '/quiz' },
+            { name: 'ENTRANCE EXAM PREPARATION', image: 'src/assets/Entrance Exam.jpg', path: '/entrance-exam' },
           ].map((offer, index) => (
             <div
               key={index}

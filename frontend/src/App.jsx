@@ -24,6 +24,7 @@ import ResultPage from './Component/Mock Test/Result';
 import FullTest from './Component/Full_Mock_Test/Full_Test';
 import FeedbackForm from "./Component/Feedback/FeedbackForm.jsx"
 import Entrance from './Component/Entrance_Exam/Entrance_Exam.jsx'
+import Entrance_qs from './Component/Entrance_Exam/Exam_qs.jsx'
 
 import './Component/LogoAnimation/LogoAnimation.css';
 import './Component/HomePage/HomePage.css';
@@ -40,7 +41,7 @@ import NotFound from "./Component/NotFound/Notfound.jsx"
 import './Component/DSA_Preparation/DSATracker.css';
 import './Component/InterviewTypes/InterviewTypes.css'
 import './Component/Entrance_Exam/Entrance_Exam.css'
-
+import './Component/Entrance_Exam/Exam_qs.css'
 
 const App = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -82,7 +83,7 @@ const App = () => {
         <Route path="/feedback" element={authUser ?<FeedbackForm/> : <Register/>} />
         <Route path="/inttypes" element={authUser ?<IntTypes/> : <Register/>} />
         <Route path="/entrance-exam" element={authUser ?<Entrance/> : <Register/>} />
-
+        <Route path="/:examId/questions" element={authUser ?<Entrance_qs/> : <Register/>} />
         {/* <Route path="/register" element={<Register isSignIn={isSignIn} setIsSignIn={setIsSignIn} />} /> */}
         <Route
           path="/qs"

@@ -21,6 +21,7 @@ function DSATracker({
   const [isAddTopicOpen, setIsAddTopicOpen] = useState(false)
   const [isAddSubjectOpen, setIsAddSubjectOpen] = useState(false)
   const [isNotesOpen, setIsNotesOpen] = useState(false)
+  const [openDropdownId, setOpenDropdownId] = useState(null)
   const [currentNotes, setCurrentNotes] = useState({
     subjectId: "",
     topicId: "",
@@ -89,7 +90,7 @@ function DSATracker({
     return stars
   }
 
-  const DATA_VERSION = "v2" // Change this when initialData changes
+  const DATA_VERSION = "v1" // Change this when initialData changes
 
   // Helper function to convert old article format to new format
   const convertArticleFormat = (resources) => {
@@ -654,9 +655,7 @@ function DSATracker({
                                           className="study-tracker__resource-link"
                                           onClick={(e) => {
                                             e.stopPropagation()
-                                            const dropdown = e.currentTarget.nextElementSibling
-                                            dropdown.style.display =
-                                              dropdown.style.display === "block" ? "none" : "block"
+                                            setOpenDropdownId(openDropdownId === resource.id ? null : resource.id)
                                           }}
                                         >
                                           <svg
@@ -677,30 +676,17 @@ function DSATracker({
                                             <line x1="10" x2="8" y1="9" y2="9" />
                                           </svg>
                                         </button>
-                                        <div className="study-tracker__dropdown-content">
-                                          {resource.articles && resource.articles.length > 0 ? (
-                                            resource.articles.map((article, index) => (
-                                              <a
-                                                key={index}
-                                                href={article.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="study-tracker__dropdown-item"
-                                              >
-                                                {article.title || `Article ${index + 1}`}
-                                              </a>
-                                            ))
-                                          ) : resource.article ? (
-                                            <a
-                                              href={resource.article}
-                                              target="_blank"
-                                              rel="noopener noreferrer"
-                                              className="study-tracker__dropdown-item"
-                                            >
-                                              Article
+                                        <div
+                                          className="study-tracker__dropdown-content"
+                                          style={{ display: openDropdownId === resource.id ? "block" : "none" }}
+                                        >
+                                          {resource.articles.map((article, index) => (
+                                            <a key={index} href={article.url} className="study-tracker__dropdown-item" target="_blank">
+                                              {article.title || `Article ${index + 1}`}
                                             </a>
-                                          ) : null}
+                                          ))}
                                         </div>
+
                                       </div>
                                     ) : null}
                                   </td>

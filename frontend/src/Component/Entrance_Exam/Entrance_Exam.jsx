@@ -4,8 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import "./Entrance_Exam.css"
 import { useNavigate } from "react-router-dom"
-import Header from '../Header/Header'
-
+import Header from "../Header/Header"
 
 // Icons as SVG components
 const CodeIcon = () => (
@@ -154,82 +153,81 @@ const ArrowRightIcon = () => (
     <path d="m12 5 7 7-7 7"></path>
   </svg>
 )
+
 const ExamPage = () => {
-
-const examData = [
-  {
-    id: 1,
-    name: "GATE",
-    fullName: "Graduate Aptitude Test in Engineering",
-    description:
-      "a national-level entrance exam in India for admission to postgraduate programs (M.Tech and PhD) in engineering and technology at institutions like IITs, NITs, IIITs etc.",
-    icon: <CodeIcon />,
-    color: "exam-portal-blue-gradient",
-    url: "https://gate.iitk.ac.in/",
-    path: "/gate",
-  },
-  {
-    id: 2,
-    name: "NET",
-    fullName: "National Eligibility Test",
-    description:
-      "Determines eligibility for assistant professor positions and Junior Research Fellowship in Indian universities and colleges.",
-    icon: <BookOpenIcon />,
-    color: "exam-portal-purple-gradient",
-    url: "https://ugcnet.nta.nic.in/",
-    path: "/net",
-  },
-  {
-    id: 3,
-    name: "NIMCET",
-    fullName: "Common Admission Test",
-    description:
-      "Entrance Test for MCA in NITs.",
-    icon: <LineChartIcon />,
-    color: "exam-portal-red-gradient",
-    url: "https://nimcet.admissions.nic.in",
-    path: "/cat",
-  },
-  {
-    id: 4,
-    name: "JEE",
-    fullName: "Joint Entrance Examination",
-    description: "Engineering entrance assessment conducted for admission to various engineering colleges in India.",
-    icon: <GraduationCapIcon />,
-    color: "exam-portal-green-gradient",
-    url: "https://jeemain.nta.nic.in/",
-    path: "/jee",
-  },
-  {
-    id: 5,
-    name: "CUET-UG",
-    fullName: "Common University Entrance Test",
-    description: "For: B.Sc. / B.Tech programs in central universities",
-    icon: <GraduationCapIcon />,
-    color: "exam-portal-pink-gradient",
-    url: " https://cuet.nta.nic.in",
-  },
-  {
-    id: 6,
-    name: "CUET-PG",
-    fullName: "Common University Entrance Test",
-    description:
-      "For: M.Sc.(in CS) / MCA programs in central universities",
-    icon: <GraduationCapIcon />,
-    color: "exam-portal-yellow-gradient",
-    url: "https://exams.nta.ac.in/CUET-PG",
-  },
-  
-]
-
+  const examData = [
+    {
+      id: 1,
+      name: "GATE",
+      fullName: "Graduate Aptitude Test in Engineering",
+      description:
+        "Entrance Exam for M.Tech and PhD IITs, NITs, IIITs etc.",
+      icon: <CodeIcon />,
+      color: "exam-portal-blue-gradient",
+      url: "https://gate.iitk.ac.in/",
+      path: "/gate/questions",
+    },
+    {
+      id: 2,
+      name: "NET",
+      fullName: "National Eligibility Test",
+      description:
+        "Determines eligibility for assistant professor positions and Junior Research Fellowship in Indian universities and colleges.",
+      icon: <BookOpenIcon />,
+      color: "exam-portal-purple-gradient",
+      url: "https://ugcnet.nta.nic.in/",
+      path: "/net/questions",
+    },
+    {
+      id: 3,
+      name: "NIMCET",
+      fullName: "NIT MCA Common Entrance Test",
+      description: "Entrance Test for MCA in NITs.",
+      icon: <LineChartIcon />,
+      color: "exam-portal-red-gradient",
+      url: "https://nimcet.admissions.nic.in",
+      path: "/nimcet/questions",
+    },
+    {
+      id: 4,
+      name: "JEE",
+      fullName: "Joint Entrance Examination",
+      description: "Engineering entrance assessment conducted for admission to various engineering colleges in India.",
+      icon: <GraduationCapIcon />,
+      color: "exam-portal-green-gradient",
+      url: "https://jeemain.nta.nic.in/",
+      path: "/jee/questions",
+    },
+    {
+      id: 5,
+      name: "CUET-UG",
+      fullName: "Common University Entrance Test",
+      description: "For: B.Sc. / B.Tech programs in central universities",
+      icon: <GraduationCapIcon />,
+      color: "exam-portal-pink-gradient",
+      url: " https://cuet.nta.nic.in",
+      path: "/cuet-ug/questions",
+    },
+    {
+      id: 6,
+      name: "CUET-PG",
+      fullName: "Common University Entrance Test",
+      description: "For: M.Sc.(in CS) / MCA programs in central universities",
+      icon: <GraduationCapIcon />,
+      color: "exam-portal-yellow-gradient",
+      url: "https://exams.nta.ac.in/CUET-PG",
+      path: "/cuet-pg/questions",
+    },
+  ]
 
   const [activeId, setActiveId] = useState(null)
   const canvasRef = useRef(null)
   const navigate = useNavigate()
 
-  const handleNavigate=(path)=>{
-  navigate(path)
-}
+  const handleNavigate = (path) => {
+    navigate(path)
+  }
+
   // Handle card navigation
   const navigateToExam = (url, e) => {
     e.stopPropagation() // Prevent triggering hover effect
@@ -345,15 +343,11 @@ const examData = [
 
   return (
     <div className="exam-portal-page">
-      <Header/>
+      <Header />
       <canvas ref={canvasRef} className="exam-portal-animated-background"></canvas>
 
       <div className="exam-portal-container">
         <h1 className="exam-portal-title">Entrance Examination Guide</h1>
-        {/* <p className="exam-portal-subtitle">
-          Explore comprehensive information about various competitive examinations in India. Hover over each card to
-          learn more about the exam.
-        </p> */}
 
         <div className="exam-portal-grid">
           {examData.map((exam) => (
@@ -398,18 +392,14 @@ const examData = [
                     exit={{ opacity: 0, height: 0 }}
                     transition={{
                       duration: 0.1,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
                     }}
                   >
                     {exam.description}
                   </motion.div>
 
-
-                  <motion.button
-                    className="exam-portal-nav-button"
-                    onClick={(e) => navigateToExam(exam.url, e)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <motion.div
+                    className="exam-portal-actions"
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: activeId === exam.id ? 1 : 0,
@@ -417,8 +407,27 @@ const examData = [
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    Visit Official Website <ArrowRightIcon />
-                  </motion.button>
+                    <motion.button
+                      className="exam-portal-nav-button"
+                      onClick={(e) => navigateToExam(exam.url, e)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Official Website <ArrowRightIcon />
+                    </motion.button>
+
+                    <motion.button
+                      className="exam-portal-questions-button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleNavigate(exam.path)
+                      }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Previous Questions <ArrowRightIcon />
+                    </motion.button>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>

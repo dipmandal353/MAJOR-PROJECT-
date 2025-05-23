@@ -115,7 +115,7 @@
 /* Exam cards */
 .exam-portal-card {
   position: relative;
-  height: 250px;
+  height: 300px;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -294,3 +294,34 @@
     margin-top: 50px;
   }
 }
+
+/* Add this to your existing CSS file */
+
+.exam-portal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.exam-portal-questions-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+.exam-portal-questions-button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+

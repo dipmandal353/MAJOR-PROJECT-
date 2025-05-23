@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Webcam from "react-webcam";
 import './Test.css';
 
 const MockTest = () => {
@@ -18,6 +19,7 @@ const MockTest = () => {
   const [categoryList, setCategoryList] = useState([]);
   const [subjectList, setSubjectList] = useState([]);
   const [questionCount, setQuestionCount] = useState(10);
+  const [tabWarnings, setTabWarnings] = useState(0);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -74,6 +76,30 @@ const MockTest = () => {
 
     return () => clearInterval(timer);
   }, [timeLeft]);
+
+  useEffect(() => {
+  const handleVisibilityChange = () => {
+    if (document.hidden) {
+      setTabWarnings(prev => {
+        const newCount = prev + 1;
+
+        if (newCount >= 3) {
+          alert("You have switched tabs too many times. The test is being submitted.");
+          handleSubmit(); // Submit test immediately
+        } else {
+          alert(`Warning ${newCount}: Please do not switch tabs during the test.`);
+        }
+
+        return newCount;
+      });
+    }
+  };
+
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+  return () => {
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+  };
+}, []);
 
   useEffect(() => {
   if (randomizedQuestions.length > 0) {
@@ -225,6 +251,20 @@ const MockTest = () => {
 
         <button className="mock-test-submit" onClick={handleSubmit}>Submit Test</button>
       </div>
+      <div className="mock-test-webcam-floating-center">
+        <Webcam
+          audio={false}
+          screenshotFormat="image/jpeg"
+          width={150}
+          height={130}
+          videoConstraints={{
+            width: 180,
+            height: 130,
+            facingMode: "user"
+          }}
+        />
+      </div>
+
     </div>
   );
 };
